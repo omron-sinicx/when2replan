@@ -1,0 +1,28 @@
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Titillium+Web:wght@600&display=swap');
+
+// custom variables and variables overwrites
+// $global-font-family: 'Raleway','Ubuntu';
+$global-font-family: 'Titillium Web';
+// $global-link-color: #DA7D02;
+
+// code block
+$base-pre-background: #f8f8f8;
+$base-pre-border: 0 solid #e5e5e5;
+$base-pre-border-radius: 0;
+$base-pre-font-size: 12px;
+$base-pre-font-family: "Roboto Mono", monospace;
+
+// default variables and mixins
+@import "uikit/src/scss/variables-theme.scss";
+@import "uikit/src/scss/mixins-theme.scss";
+
+// import uikit
+@import "uikit/src/scss/uikit.scss"
+// @import "uikit/src/scss/uikit-theme.scss";
+
+// pre {
+//   background: #f8f8f8;
+// }
+
