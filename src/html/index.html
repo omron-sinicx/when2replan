@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Path Planning using Neural A*</title>
+    <!-- TODO: meta -->
+  </head>
+
+  <body>
+    <div class="uk-container uk-container-small">
+      <div class="uk-section">
+        <h1 class="uk-text-center uk-width-1-1">Path Planning using Neural A* Search</h1>
+        <div class="uk-flex uk-flex-center">
+          <span class="">Ryo Yonetani*<sup>1</sup></span>
+          <span class="uk-margin-left">Tatsunori Taniai*<sup>1</sup></span>
+          <span class="uk-margin-left">Mohammadamin Barekatain<sup>1,2</sup></span>
+          <span class="uk-margin-left">Mai Nishimura<sup>1</sup></span>
+          <span class="uk-margin-left">Asako Kanezaki<sup>3</sup></span>
+        </div>
+        <div class="uk-text-meta uk-text-center" uk-grid>
+          <span class="uk-width-1-4"><sup>1</sup>OMRON SINIC X</span>
+          <span class="uk-width-1-4"><sup>2</sup>Technical University of Munich</span>
+          <span class="uk-width-1-4"><sup>3</sup>Tokyo Institute of Technology</span>
+          <span class="uk-width-1-4">*equal contribution.</span>
+        </div>
+        <div class="uk-flex uk-flex-center uk-margin-top">
+          <button class="uk-button uk-button-default">
+            <span class="uk-icon" uk-icon="file-pdf" />
+            PAPER
+          </button>
+          <button class="uk-button uk-button-default uk-margin-left">
+            <span class="uk-icon" uk-icon="play-circle" />
+            VIDEO
+          </button>
+          <button class="uk-button uk-button-default uk-margin-left" uk-tooltip="title: COMING SOON">
+            <span class="uk-icon" uk-icon="github" />
+            CODE
+          </button>
+        </div>
+        <div class="uk-margin-top uk-flex uk-flex-center">
+          <img data-src="assets/teaser.jpeg" width="700" height="" alt="" uk-img>
+        </div>
+      </div>
+    </div>
+    <div class="uk-container uk-container-small">
+      <div class="uk-section">
+        <h2>Overview</h2>
+        <p>
+          We present Neural A*, a novel data-driven searchmethod for path
+          planning problems. Despite the recent increasing attention to
+          data-driven path planning, a machine learning approach to search-based
+          planning is still challenging due to the dis-crete nature of search
+          algorithms. In this work, we reformulate a canonical A* search
+          algorithmto be differentiable and couple it with a convo-lutional
+          encoder to form an end-to-end trainableneural network planner. Neural
+          A* solves a path planning problem by encoding a problem instanceto a
+          guidance map and then performing the dif-ferentiable A* search with
+          the guidance map. By learning to match the search results with
+          ground-truth paths provided by experts, Neural A* canproduce a path
+          consistent with the ground truthaccurately and efficiently. Our
+          extensive exper-iments confirmed that Neural A*
+          outperformed state-of-the-art data-driven planners in terms of the
+          search optimality and efficiency trade-off, and furthermore,
+          successfully predicted realistic human trajectories by directly
+          performing search-based planning on natural image inputs.
+        </p>
+      </div>
+      <div class="uk-section">
+        <h2>Video</h2>
+        <iframe class="uk-align-center" width="560" height="315" src="https://www.youtube.com/embed/OB8KE9VXv3s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="uk-section">
+        <h2>Results</h2>
+        <table class="uk-table uk-table-divider">
+            <thead>
+                <tr>
+                    <th>Table Heading</th>
+                    <th>Table Heading</th>
+                    <th>Table Heading</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Table Data</td>
+                    <td>Table Data</td>
+                    <td>Table Data</td>
+                </tr>
+                <tr>
+                    <td>Table Data</td>
+                    <td>Table Data</td>
+                    <td>Table Data</td>
+                </tr>
+                <tr>
+                    <td>Table Data</td>
+                    <td>Table Data</td>
+                    <td>Table Data</td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+      <div class="uk-section">
+        <h2>Contact</h2>
+        <div class="uk-grid-medium uk-flex-middle" uk-grid>
+          <div class="uk-width-auto">
+            <img class="uk-comment-avatar" src=/assets/potato.png width="80" height="80" alt="">
+          </div>
+          <div class="uk-width-expand">
+            <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Potato</a></h4>
+            <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+              <li><a href="#">Senior Researcher</a></li>
+              <li><a href="#">OMRON SINIC X</a></li>
+            </ul>
+          </div>
+          <div class="uk-width-auto">
+            <img class="uk-comment-avatar" src=/assets/shiromo.png width="80" height="80" alt="">
+          </div>
+          <div class="uk-width-expand">
+            <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Shiromo</a></h4>
+            <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+              <li><a href="#">Senior Researcher</a></li>
+              <li><a href="#">OMRON SINIC X</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="uk-section">
+        <h2>Citation</h2>
+        <pre><code>// Code example
+  &lt;div id="myid" class="myclass" hidden&gt;
+      Lorem ipsum &lt;strong&gt;dolor&lt;/strong&gt; sit amet, consectetur adipiscing elit.
+  &lt;/div&gt;</code></pre>
+      </div>
+    </div>
+    <div class="uk-text-center uk-text-meta">
+      <a href="">© 2021 OMRON SINIC X Corporation, all rights reserved.</a>
+    </div>
+  </body>
+</html>
