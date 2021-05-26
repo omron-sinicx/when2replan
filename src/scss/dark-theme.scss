@@ -26,8 +26,10 @@ $tooltip-border-radius: 5px;
 
 $omron-color: #1C5EB8;
 
-$theme-color: #fff;
-$theme-color-fg: #333;
+$theme-color: #282C34;
+$theme-color-fg: #eee;
+$button-text-color: $theme-color-fg;
+$button-text-hover-color: #fff;
 
 $background-secondary-background: $theme-color;
 $button-primary-background: $theme-color;
