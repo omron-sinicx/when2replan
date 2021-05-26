@@ -21,6 +21,7 @@ $section-padding-vertical-m: 25px;
 // $global-font-size: clamp(15px,4vw,20px);
 $global-font-size: clamp(16px,4vw,16px);
 $global-medium-font-size: clamp(15px,1vw,18px); // comment-font-size
+$background-secondary-background: #282C34;
 
 // default variables and mixins
 @import "uikit/src/scss/variables-theme.scss";
