@@ -1,10 +1,10 @@
+// reference: uikit/src/scss/variables.scss
+
 // fonts
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Titillium+Web:wght@600&display=swap');
 
-// custom variables and variables overwrites
-// $global-font-family: 'Raleway','Ubuntu';
-$global-font-family: 'Titillium Web';
+$global-font-family: 'Titillium Web', 'Raleway', 'Ubuntu';
 // $global-link-color: #DA7D02;
 
 // code block
@@ -14,15 +14,19 @@ $base-pre-border-radius: 0;
 $base-pre-font-size: 12px;
 $base-pre-font-family: "Roboto Mono", monospace;
 
+// sections
+$section-padding-vertical-m: 25px;
+
+// font size
+// $global-font-size: clamp(15px,4vw,20px);
+$global-font-size: clamp(16px,4vw,16px);
+$global-medium-font-size: clamp(15px,1vw,18px); // comment-font-size
+
 // default variables and mixins
 @import "uikit/src/scss/variables-theme.scss";
 @import "uikit/src/scss/mixins-theme.scss";
 
 // import uikit
-@import "uikit/src/scss/uikit.scss"
+@import "uikit/src/scss/uikit.scss";
+@import "~normalize.css/normalize.css";
 // @import "uikit/src/scss/uikit-theme.scss";
-
-// pre {
-//   background: #f8f8f8;
-// }
-
