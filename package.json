@@ -10,9 +10,15 @@
   "author": "Mai Nishimura <mai.nishimura@sinicx.com>",
   "license": "MIT License",
   "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
     "css-loader": "^5.2.4",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.1",
+    "js-yaml-loader": "^1.2.2",
+    "react-hot-loader": "^4.13.0",
     "sass": "^1.32.12",
     "sass-loader": "^11.1.0",
     "style-loader": "^2.0.0",
@@ -22,7 +28,11 @@
     "webpack-dev-server": "3.11.2"
   },
   "dependencies": {
+    "fork-me-on-github": "^1.0.6",
     "normalize.css": "^8.0.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^6.1.0",
     "uikit": "^3.6.21"
   }
 }

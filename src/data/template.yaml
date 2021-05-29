@@ -1,0 +1,91 @@
+organization: OMRON SINIC X
+twitter: "@omron_sinicx"
+title: Pui! Pui! Molcar
+conference: ICML2021
+repo: https://molcar-anime.com
+paper: null
+video: https://www.youtube.com/embed/OB8KE9VXv3s
+description: a Japanese stop-motion short anime series produced by Shin-Ei Animation and Japan Green Hearts in cooperation with Bandai Namco Entertainment.
+image: https://omron-sinicx.github.io/neural-astar/assets/teaser.png
+url: https://omron-sinicx.github.io/neural-astar
+authors:
+  - name: Ryo Yonetani*
+    affiliation: [1]
+    position: principal investigator
+    url: https://yonetaniryo.github.io/
+    icon: https://www.omron.com/sinicx/assets/img/members/members_yonetani_thum.jpg
+  - name: Tatsunori Taniai*
+    affiliation: [1]
+    position: senior researcher
+  - name: Mohammadamin Barekatain
+    affiliation: [1, 2]
+    url: http://barekatain.me/
+  - name: Mai Nishimura
+    affiliation: [1]
+    url: https://denkiwakame.github.io
+  - name: Asako Kanezaki
+    affiliation: [2]
+    url: https://kanezaki.github.io/
+affiliations:
+  - OMRON SINIC X
+  - Technical University of Munich
+  - Tokyo Institute of Technology
+bibtex: >
+  @article{DBLP:journals/corr/abs-2009-07476,
+    author    = {Ryo Yonetani and
+                 Tatsunori Taniai and
+                 Mohammadamin Barekatain and
+                 Mai Nishimura and
+                 Asako Kanezaki},
+    title     = {Path Planning using Neural A* Search},
+    journal   = {CoRR},
+    volume    = {abs/2009.07476},
+    year      = {2020},
+    url       = {https://arxiv.org/abs/2009.07476},
+    archivePrefix = {arXiv},
+    eprint    = {2009.07476},
+    timestamp = {Wed, 23 Sep 2020 15:51:46 +0200},
+    biburl    = {https://dblp.org/rec/journals/corr/abs-2009-07476.bib},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+  }
+
+overview: >
+  We present Neural A*, a novel data-driven search
+  method for path planning problems. Despite the
+  recent increasing attention to data-driven path
+  planning, a machine learning approach to search-
+  based planning is still challenging due to the dis-
+  crete nature of search algorithms. In this work, we
+  reformulate a canonical A* search algorithm to be
+  differentiable and couple it with a convolutional
+  encoder to form an end-to-end trainable neural
+  network planner. Neural A* solves a path plan-
+  ning problem by (1) encoding a problem instance
+  to a guidance map and (2) performing the differen-
+  tiable A* search with the guidance map. By learn-
+  ing to match the search results with ground-truth
+  paths provided by experts, Neural A* can produce
+  a path consistent with the ground truth accurately
+  and efficiently. Our extensive experiments con-
+  firmed that Neural A* outperformed state-of-the-
+  art data-driven planners in terms of the search
+  optimality and efficiency trade-off, and further-
+  more, successfully predicted realistic pedestrian
+  paths by directly performing a search on natural
+  image inputs.
+
+method: >
+  Neural A* consists of the combination of a fully-convolutional encoder
+  and the differentiable A* module, and is trained as follows:
+  (1) Given a problem instance (i.e., an environmental map annotated with start and goal points), the encoder transforms it
+  into a scalar-valued map representation referred to as a guidance map; (2) The differentiable A* module then performs a
+  search with the guidance map to output a search history and
+  a resulting path; (3) The search history is compared against
+  the ground-truth path of the input instance to derive a loss,
+  which is back-propagated to train the encoder.
+
+results:
+  - This is a result description text.
+  - This is a result1 description text.
+  - This is a result2 description text.
+  - This is a result3 description text.
