@@ -8,6 +8,8 @@ import Video from "../components/video.jsx";
 import Method from "../components/method.jsx";
 import Result from "../components/results.jsx";
 import Contact from "../components/contact.jsx";
+import Footer from "../components/footer.jsx";
+import Citation from "../components/citation.jsx";
 
 import data from "../data/template.yaml";
 
@@ -49,7 +51,9 @@ class Template extends React.Component {
           <Method method={data.method} />
           <Result results={data.results} />
           <Contact authors={data.authors} />
+          <Citation bibtex={data.bibtex} />
         </div>
+        <Footer />
       </div>
     )
   }

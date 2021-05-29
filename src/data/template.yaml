@@ -30,6 +30,24 @@ affiliations:
   - OMRON SINIC X
   - Technical University of Munich
   - Tokyo Institute of Technology
+bibtex: >
+  @article{DBLP:journals/corr/abs-2009-07476,
+    author    = {Ryo Yonetani and
+                 Tatsunori Taniai and
+                 Mohammadamin Barekatain and
+                 Mai Nishimura and
+                 Asako Kanezaki},
+    title     = {Path Planning using Neural A* Search},
+    journal   = {CoRR},
+    volume    = {abs/2009.07476},
+    year      = {2020},
+    url       = {https://arxiv.org/abs/2009.07476},
+    archivePrefix = {arXiv},
+    eprint    = {2009.07476},
+    timestamp = {Wed, 23 Sep 2020 15:51:46 +0200},
+    biburl    = {https://dblp.org/rec/journals/corr/abs-2009-07476.bib},
+    bibsource = {dblp computer science bibliography, https://dblp.org}
+  }
 
 overview: >
   We present Neural A*, a novel data-driven search
