@@ -10,7 +10,7 @@ export default class Authors extends React.Component {
     return (
       <div>
         <div className="uk-flex uk-flex-center uk-text-primary">
-          {this.props.authors.map((author)=>{ return <span className="uk-margin-left"><a href={author.url}>{author.name}</a><sup>{author.affiliation.join(',')}</sup></span> })}
+          {this.props.authors.map((author)=>{ return <span className="uk-margin-left"><a className="uk-link-toggle" href={author.url}>{author.name}</a><sup>{author.affiliation.join(',')}</sup></span> })}
         </div>
         <div className="uk-text-meta uk-text-center">
           {this.props.affiliations.map((affiliation,idx)=>{ return <span className="uk-margin-left"><sup>{idx+1}</sup>{affiliation}</span>})}

@@ -44,10 +44,10 @@ export default class Results extends React.Component {
         </table>
         <h3>Selected Path Planning Results</h3>
         <p>{this.props.results[2]}</p>
-        <img src={resultImg1} className="uk-align-center" alt="" uk-img />
+        <img src={resultImg1} className="uk-align-center" alt="" />
         <h3>Path Planning Results on SSD Dataset</h3>
         <p>{this.props.results[3]}</p>
-        <img src={resultImg2} className="uk-align-center" alt="" uk-img />
+        <img src={resultImg2} className="uk-align-center" alt="" />
       </div>
     );
   }

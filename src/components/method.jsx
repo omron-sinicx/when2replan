@@ -9,7 +9,7 @@ export default class Method extends React.Component {
     return (
       <div className="uk-section">
         <h2>Neural A*</h2>
-        <img src={methodImg} className="uk-align-center" alt="" uk-img />
+        <img src={methodImg} className="uk-align-center" alt="" />
         <p>{this.props.method}</p>
       </div>
     );
