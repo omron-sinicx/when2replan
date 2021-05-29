@@ -1,0 +1,32 @@
+organization: OMRON SINIC X
+twitter: "@omron_sinicx"
+title: Pui! Pui! Molcar
+conference: ICML2021
+repo: https://molcar-anime.com
+description: a Japanese stop-motion short anime series produced by Shin-Ei Animation and Japan Green Hearts in cooperation with Bandai Namco Entertainment.
+image: https://omron-sinicx.github.io/neural-astar/assets/teaser.png
+url: https://omron-sinicx.github.io/neural-astar
+overview: >
+  We present Neural A*, a novel data-driven search
+  method for path planning problems. Despite the
+  recent increasing attention to data-driven path
+  planning, a machine learning approach to search-
+  based planning is still challenging due to the dis-
+  crete nature of search algorithms. In this work, we
+  reformulate a canonical A* search algorithm to be
+  differentiable and couple it with a convolutional
+  encoder to form an end-to-end trainable neural
+  network planner. Neural A* solves a path plan-
+  ning problem by (1) encoding a problem instance
+  to a guidance map and (2) performing the differen-
+  tiable A* search with the guidance map. By learn-
+  ing to match the search results with ground-truth
+  paths provided by experts, Neural A* can produce
+  a path consistent with the ground truth accurately
+  and efficiently. Our extensive experiments con-
+  firmed that Neural A* outperformed state-of-the-
+  art data-driven planners in terms of the search
+  optimality and efficiency trade-off, and further-
+  more, successfully predicted realistic pedestrian
+  paths by directly performing a search on natural
+  image inputs.

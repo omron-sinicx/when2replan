@@ -1,10 +1,11 @@
 import React from 'react';
 import {render} from 'react-dom';
 import {Helmet} from "react-helmet";
-import Header from "../components/header.jsx";
-import ForkMeOnGitHub from "../components/fork-me-on-github.jsx"
 
-import data from "../data/template.json";
+import Header from "../components/header.jsx";
+import Overview from "../components/overview.jsx";
+
+import data from "../data/template.yaml";
 
 class Template extends React.Component {
   render() {
@@ -18,6 +19,9 @@ class Template extends React.Component {
             { property: "og:title", content: data.title },
             { property: "og:description", content: data.description},
             { property: 'og:image', content: data.image}, // FIXME
+            { property: "og:image:width", content: "912"},
+            { property: "og:image:height", content: "618"},
+            { property: 'og:url', content: data.url},
             { name: 'twitter:card', content: "summary_large_image"},
             { name: 'twitter:title', content: data.title},
             { name: 'twitter:image', content: data.image},
@@ -27,6 +31,9 @@ class Template extends React.Component {
           ]}
         />
         <Header title={data.title} conference={data.conference} />
+        <div class="uk-container uk-container-small">
+          <Overview overview={data.overview} />
+        </div>
       </div>
     )
   }
