@@ -12,7 +12,7 @@ export default class Authors extends React.Component {
         <div className="uk-flex uk-flex-center uk-text-primary">
           {this.props.authors.map((author)=>{ return <span className="uk-margin-left">{author.name}<sup>{author.affiliation.join(',')}</sup></span> })}
         </div>
-        <div className="uk-text-meta uk-text-center" uk-grid>
+        <div className="uk-text-meta uk-text-center">
           {this.props.affiliations.map((affiliation,idx)=>{ return <span className="uk-margin-left"><sup>{idx+1}</sup>{affiliation}</span>})}
         </div>
       </div>
