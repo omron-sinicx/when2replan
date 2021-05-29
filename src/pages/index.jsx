@@ -7,6 +7,7 @@ import Overview from "../components/overview.jsx";
 import Video from "../components/video.jsx";
 import Method from "../components/method.jsx";
 import Result from "../components/results.jsx";
+import Contact from "../components/contact.jsx";
 
 import data from "../data/template.yaml";
 
@@ -47,6 +48,7 @@ class Template extends React.Component {
           <Video video={data.video} />
           <Method method={data.method} />
           <Result results={data.results} />
+          <Contact authors={data.authors} />
         </div>
       </div>
     )

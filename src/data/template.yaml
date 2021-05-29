@@ -11,14 +11,21 @@ url: https://omron-sinicx.github.io/neural-astar
 authors:
   - name: Ryo Yonetani*
     affiliation: [1]
+    position: principal investigator
+    url: https://yonetaniryo.github.io/
+    icon: https://www.omron.com/sinicx/assets/img/members/members_yonetani_thum.jpg
   - name: Tatsunori Taniai*
     affiliation: [1]
+    position: senior researcher
   - name: Mohammadamin Barekatain
     affiliation: [1, 2]
+    url: http://barekatain.me/
   - name: Mai Nishimura
     affiliation: [1]
+    url: https://denkiwakame.github.io
   - name: Asako Kanezaki
     affiliation: [2]
+    url: https://kanezaki.github.io/
 affiliations:
   - OMRON SINIC X
   - Technical University of Munich
