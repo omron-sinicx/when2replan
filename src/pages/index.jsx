@@ -7,6 +7,8 @@ import Overview from "../components/overview.jsx";
 
 import data from "../data/template.yaml";
 
+console.log(data);
+
 class Template extends React.Component {
   render() {
     return (
@@ -31,7 +33,7 @@ class Template extends React.Component {
           ]}
         />
         <Header title={data.title} conference={data.conference} />
-        <div class="uk-container uk-container-small">
+        <div className="uk-container uk-container-small">
           <Overview overview={data.overview} />
         </div>
       </div>
