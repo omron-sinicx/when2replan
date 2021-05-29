@@ -1,5 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
+import Authors from '../components/authors.jsx';
 
 export default class Header extends React.Component {
   constructor(props) { super(props); }
@@ -12,19 +13,7 @@ export default class Header extends React.Component {
             <p className="uk-h1 uk-text-primary">{this.props.title}</p>
             <span className="uk-label uk-label-primary uk-text-center uk-margin-bottom">{this.props.conference}</span>
           </div>
-          <div className="uk-flex uk-flex-center uk-text-primary">
-            <span className="">Ryo Yonetani*<sup>1</sup></span>
-            <span className="uk-margin-left">Tatsunori Taniai*<sup>1</sup></span>
-            <span className="uk-margin-left">Mohammadamin Barekatain<sup>1,2</sup></span>
-            <span className="uk-margin-left">Mai Nishimura<sup>1</sup></span>
-            <span className="uk-margin-left">Asako Kanezaki<sup>3</sup></span>
-          </div>
-          <div className="uk-text-meta uk-text-center" uk-grid>
-            <span className="uk-width-1-4"><sup>1</sup>OMRON SINIC X</span>
-            <span className="uk-width-1-4"><sup>2</sup>Technical University of Munich</span>
-            <span className="uk-width-1-4"><sup>3</sup>Tokyo Institute of Technology</span>
-            <span className="uk-width-1-4">*Equal Contribution.</span>
-          </div>
+          <Authors authors={this.props.authors} affiliations={this.props.affiliations} />
           <div className="uk-flex uk-flex-center uk-margin-top">
             <button className="uk-button uk-button-text">
               <span className="uk-icon" uk-icon="file-pdf" /> paper

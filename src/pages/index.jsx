@@ -32,7 +32,7 @@ class Template extends React.Component {
             { name: 'twitter:site', content: data.twitter},
           ]}
         />
-        <Header title={data.title} conference={data.conference} />
+        <Header title={data.title} conference={data.conference} authors={data.authors} affiliations={data.affiliations}/>
         <div className="uk-container uk-container-small">
           <Overview overview={data.overview} />
         </div>

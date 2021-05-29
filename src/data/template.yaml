@@ -6,6 +6,22 @@ repo: https://molcar-anime.com
 description: a Japanese stop-motion short anime series produced by Shin-Ei Animation and Japan Green Hearts in cooperation with Bandai Namco Entertainment.
 image: https://omron-sinicx.github.io/neural-astar/assets/teaser.png
 url: https://omron-sinicx.github.io/neural-astar
+authors:
+  - name: Ryo Yonetani*
+    affiliation: [1]
+  - name: Tatsunori Taniai*
+    affiliation: [1]
+  - name: Mohammadamin Barekatain
+    affiliation: [1, 2]
+  - name: Mai Nishimura
+    affiliation: [1]
+  - name: Asako Kanezaki
+    affiliation: [2]
+affiliations:
+  - OMRON SINIC X
+  - Technical University of Munich
+  - Tokyo Institute of Technology
+
 overview: >
   We present Neural A*, a novel data-driven search
   method for path planning problems. Despite the
