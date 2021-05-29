@@ -3,8 +3,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   target: "web",
+  //   entry: {
+  //     index: path.join(__dirname, "src", "js", "index.js"),
+  //     css: path.join(__dirname, "src", "js", "styles.js"),
+  //   },
   entry: {
-    index: path.join(__dirname, "src", "js", "index.js"),
+    index: path.join(__dirname, "src", "pages", "index.jsx"),
     css: path.join(__dirname, "src", "js", "styles.js"),
   },
   output: {
@@ -28,7 +32,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css/i,
+        test: /\.jsx$/i,
+        use: {
+          loader: "babel-loader",
+        },
+      },
+      {
+        test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
       {
