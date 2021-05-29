@@ -15,13 +15,13 @@ export default class Header extends React.Component {
           </div>
           <Authors authors={this.props.authors} affiliations={this.props.affiliations} />
           <div className="uk-flex uk-flex-center uk-margin-top">
-            <button className="uk-button uk-button-text">
+            <button className="uk-button uk-button-text" href={this.props.paper}>
               <span className="uk-icon" uk-icon="file-pdf" /> paper
             </button>
-            <button className="uk-button uk-button-text uk-margin-left">
+            <button className="uk-button uk-button-text uk-margin-left" href={this.props.video}>
               <span className="uk-icon" uk-icon="play-circle" /> video
             </button>
-            <button className="uk-button uk-button-text uk-margin-left" uk-tooltip="title: COMING SOON">
+            <button className="uk-button uk-button-text uk-margin-left" uk-tooltip="title: COMING SOON" href={this.props.code}>
               <span className="uk-icon" uk-icon="github" /> code
             </button>
           </div>
