@@ -3,10 +3,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   target: "web",
-  //   entry: {
-  //     index: path.join(__dirname, "src", "js", "index.js"),
-  //     css: path.join(__dirname, "src", "js", "styles.js"),
-  //   },
   entry: {
     index: path.join(__dirname, "src", "pages", "index.jsx"),
     css: path.join(__dirname, "src", "js", "styles.js"),
