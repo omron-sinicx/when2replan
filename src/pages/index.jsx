@@ -4,6 +4,7 @@ import {Helmet} from "react-helmet";
 
 import Header from "../components/header.jsx";
 import Overview from "../components/overview.jsx";
+import Video from "../components/video.jsx";
 
 import data from "../data/template.yaml";
 
@@ -41,6 +42,7 @@ class Template extends React.Component {
                 paper={data.paper} />
         <div className="uk-container uk-container-small">
           <Overview overview={data.overview} />
+          <Video video={data.video} />
         </div>
       </div>
     )
