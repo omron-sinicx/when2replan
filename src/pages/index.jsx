@@ -6,6 +6,7 @@ import Header from "../components/header.jsx";
 import Overview from "../components/overview.jsx";
 import Video from "../components/video.jsx";
 import Method from "../components/method.jsx";
+import Result from "../components/results.jsx";
 
 import data from "../data/template.yaml";
 
@@ -45,6 +46,7 @@ class Template extends React.Component {
           <Overview overview={data.overview} />
           <Video video={data.video} />
           <Method method={data.method} />
+          <Result />
         </div>
       </div>
     )
