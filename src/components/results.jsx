@@ -9,7 +9,9 @@ export default class Results extends React.Component {
     return (
       <div className="uk-section">
         <h2>Results</h2>
+        <p>{this.props.results[0]}</p>
         <h3>Motion Planning (MP) Dataset</h3>
+        <p>{this.props.results[1]}</p>
         <table className="uk-table uk-table-divider">
           <thead>
             <tr>
@@ -41,8 +43,10 @@ export default class Results extends React.Component {
           </tbody>
         </table>
         <h3>Selected Path Planning Results</h3>
+        <p>{this.props.results[2]}</p>
         <img src={resultImg1} className="uk-align-center" alt="" uk-img />
         <h3>Path Planning Results on SSD Dataset</h3>
+        <p>{this.props.results[3]}</p>
         <img src={resultImg2} className="uk-align-center" alt="" uk-img />
       </div>
     );

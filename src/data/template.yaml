@@ -58,3 +58,9 @@ method: >
   a resulting path; (3) The search history is compared against
   the ground-truth path of the input instance to derive a loss,
   which is back-propagated to train the encoder.
+
+results:
+  - This is a result description text.
+  - This is a result1 description text.
+  - This is a result2 description text.
+  - This is a result3 description text.

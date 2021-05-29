@@ -46,7 +46,7 @@ class Template extends React.Component {
           <Overview overview={data.overview} />
           <Video video={data.video} />
           <Method method={data.method} />
-          <Result />
+          <Result results={data.results} />
         </div>
       </div>
     )
