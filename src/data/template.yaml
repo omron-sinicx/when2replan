@@ -48,3 +48,13 @@ overview: >
   more, successfully predicted realistic pedestrian
   paths by directly performing a search on natural
   image inputs.
+
+method: >
+  Neural A* consists of the combination of a fully-convolutional encoder
+  and the differentiable A* module, and is trained as follows:
+  (1) Given a problem instance (i.e., an environmental map annotated with start and goal points), the encoder transforms it
+  into a scalar-valued map representation referred to as a guidance map; (2) The differentiable A* module then performs a
+  search with the guidance map to output a search history and
+  a resulting path; (3) The search history is compared against
+  the ground-truth path of the input instance to derive a loss,
+  which is back-propagated to train the encoder.
