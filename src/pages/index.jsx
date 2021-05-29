@@ -10,6 +10,7 @@ import Result from "../components/results.jsx";
 import Contact from "../components/contact.jsx";
 import Footer from "../components/footer.jsx";
 import Citation from "../components/citation.jsx";
+import ForkMeOnGitHub from "fork-me-on-github";
 
 import data from "../data/template.yaml";
 
@@ -38,6 +39,13 @@ class Template extends React.Component {
             { name: 'twitter:site', content: data.twitter},
           ]}
         />
+        <div data-uk-sticky>
+          <ForkMeOnGitHub
+            repo={data.repo}
+            colorBackground="black"
+            colorOctocat="white"
+          />
+        </div>
         <Header title={data.title}
                 conference={data.conference}
                 authors={data.authors}
