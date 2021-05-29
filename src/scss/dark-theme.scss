@@ -5,7 +5,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Titillium+Web:wght@600&display=swap');
 
 $global-font-family: 'Titillium Web', 'Raleway', 'Ubuntu';
-// $global-link-color: #DA7D02;
 
 // code block
 $base-pre-background: #f8f8f8;
@@ -30,6 +29,9 @@ $theme-color: #282C34;
 $theme-color-fg: #eee;
 $button-text-color: $theme-color-fg;
 $button-text-hover-color: #fff;
+
+// TODO: link
+// $global-link-color: #DA7D02;
 
 $background-secondary-background: $theme-color;
 $button-primary-background: $theme-color;
