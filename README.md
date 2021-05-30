@@ -21,6 +21,7 @@ $ npm -v
 $ brew install nodebrew
 $ nodebrew install-binary latest
 $ echo 'export PATH=$PATH:$HOME/.nodebrew/current/bin' >> ~/.bash_profile
+$ source ~/.bash_profile
 ```
 
 ### Build
@@ -83,9 +84,9 @@ src/
 ```
 organization: OMRON SINIC X
 twitter: "@omron_sinicx"
-title: Pui! Pui! Molcar
+title: Path Planning using Neural A* Search
 conference: ICML2021
-repo: https://molcar-anime.com
+repo: https://github.com/omron-sinicx/neural-astar
 paper: null
 video: https://www.youtube.com/embed/OB8KE9VXv3s
 description: a Japanese stop-motion short anime series produced by Shin-Ei Animation and Japan Green Hearts in cooperation with Bandai Namco Entertainment.
