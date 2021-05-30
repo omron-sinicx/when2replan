@@ -9,7 +9,7 @@ export default class Overview extends React.Component {
     return (
       <div className="uk-section">
         <div className="uk-flex uk-flex-center">
-          <img src={teaserImg} width="400" height="" alt="" />
+          <img src={teaserImg} width="700" height="" alt="" />
         </div>
         <h2>Overview</h2>
         <p>{this.props.overview}</p>
