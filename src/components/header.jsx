@@ -13,7 +13,7 @@ export default class Header extends React.Component {
             <p className="uk-h1 uk-text-primary">{this.props.title}</p>
             <span className="uk-label uk-label-primary uk-text-center uk-margin-bottom">{this.props.conference}</span>
           </div>
-          <Authors authors={this.props.authors} affiliations={this.props.affiliations} />
+          <Authors authors={this.props.authors} affiliations={this.props.affiliations} meta={this.props.meta}/>
           <div className="uk-flex uk-flex-center uk-margin-top">
             <a className="uk-button uk-button-text" href={this.props.paper} target="_blank">
               <span className="uk-icon" uk-icon="file-pdf" /> paper

@@ -31,6 +31,8 @@ affiliations:
   - OMRON SINIC X
   - Technical University of Munich
   - Tokyo Institute of Technology
+meta:
+  - "* denotes equal contribution. "
 bibtex: >
   @article{DBLP:journals/corr/abs-2009-07476,
     author    = {Ryo Yonetani and
