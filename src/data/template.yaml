@@ -1,11 +1,11 @@
 organization: OMRON SINIC X
 twitter: "@omron_sinicx"
-title: Pui! Pui! Molcar
+title: Path Planning using Neural A* Search
 conference: ICML2021
-repo: https://molcar-anime.com
+repo: https://github.com/omron-sinicx/neural-astar
 paper: null
 video: https://www.youtube.com/embed/OB8KE9VXv3s
-description: a Japanese stop-motion short anime series produced by Shin-Ei Animation and Japan Green Hearts in cooperation with Bandai Namco Entertainment.
+description: Neural A*, a novel data-driven search method for path planning problems.
 image: https://omron-sinicx.github.io/neural-astar/assets/teaser.png
 url: https://omron-sinicx.github.io/neural-astar
 authors:
@@ -17,6 +17,7 @@ authors:
   - name: Tatsunori Taniai*
     affiliation: [1]
     position: senior researcher
+    url: https://taniai.space/
   - name: Mohammadamin Barekatain
     affiliation: [1, 2]
     url: http://barekatain.me/

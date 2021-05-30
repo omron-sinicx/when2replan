@@ -21,6 +21,7 @@ $ npm -v
 $ brew install nodebrew
 $ nodebrew install-binary latest
 $ echo 'export PATH=$PATH:$HOME/.nodebrew/current/bin' >> ~/.bash_profile
+$ source ~/.bash_profile
 ```
 
 ### Build
@@ -83,9 +84,9 @@ src/
 ```
 organization: OMRON SINIC X
 twitter: "@omron_sinicx"
-title: Pui! Pui! Molcar
+title: Path Planning using Neural A* Search
 conference: ICML2021
-repo: https://molcar-anime.com
+repo: https://github.com/omron-sinicx/neural-astar
 paper: null
 video: https://www.youtube.com/embed/OB8KE9VXv3s
 description: a Japanese stop-motion short anime series produced by Shin-Ei Animation and Japan Green Hearts in cooperation with Bandai Namco Entertainment.
@@ -135,3 +136,11 @@ bibtex: >
 
 ### Available Style Components in UIKit
 - see https://getuikit.com/docs/introduction
+
+### GitHub Actions
+- generate personal access token
+  - see https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-set-personal-access-token-personal_token
+- register the token as `PERSONAL_TOKEN` at `https://github.com/path/to/your/repo/settings/secrets/actions`
+- `$ git remote add github {your-github-repo-path}`
+- `$ git push github main:project-page`
+- set `Source` `Branch=gh-pages` `/(root)` at `https://github.com/path/to/your/repo/settings/pages`

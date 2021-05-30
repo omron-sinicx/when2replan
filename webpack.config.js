@@ -8,7 +8,7 @@ module.exports = {
     css: path.join(__dirname, "src", "js", "styles.js"),
   },
   output: {
-    path: path.join(__dirname, "docs"),
+    path: path.join(__dirname, "build"),
     filename: "[name].bundle.js",
   },
   devServer: {
@@ -16,7 +16,7 @@ module.exports = {
     watchContentBase: true,
     liveReload: true,
     port: 8080,
-    contentBase: path.join(__dirname, "docs"),
+    contentBase: path.join(__dirname, "build"),
   },
   plugins: [
     new HtmlWebpackPlugin({
