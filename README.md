@@ -52,14 +52,11 @@ src/
 │   ├── citation.jsx
 │   ├── contact.jsx
 │   ├── footer.jsx
-│   ├── fork-me-on-github.jsx
 │   ├── header.jsx
 │   ├── method.jsx
 │   ├── overview.jsx
 │   ├── results.jsx
 │   └── video.jsx
-├── css
-│   └── base.css
 ├── data
 │   └── template.yaml    # template arguments
 ├── html

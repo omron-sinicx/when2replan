@@ -14,8 +14,6 @@ import ForkMeOnGitHub from "fork-me-on-github";
 
 import data from "../data/template.yaml";
 
-console.log(data);
-
 class Template extends React.Component {
   render() {
     return (
@@ -23,6 +21,7 @@ class Template extends React.Component {
         <Helmet
           title={data.title}
           meta={[
+            { name: 'viewport', content: 'width=device-width,initial-scale=1'},
             { property: "og:site_name", content: data.organization },
             { property: "og:type", content: "article" },
             { property: "og:title", content: data.title },
@@ -39,10 +38,10 @@ class Template extends React.Component {
             { name: 'twitter:site', content: data.twitter},
           ]}
         />
-        <div data-uk-sticky>
+        <div data-uk-sticky className="uk-visible@s">
           <ForkMeOnGitHub
             repo={data.repo}
-            colorBackground="black"
+            colorBackground="#333"
             colorOctocat="white"
           />
         </div>
@@ -50,6 +49,7 @@ class Template extends React.Component {
                 conference={data.conference}
                 authors={data.authors}
                 affiliations={data.affiliations}
+                meta={data.meta}
                 code={data.repo}
                 video={data.video}
                 paper={data.paper} />

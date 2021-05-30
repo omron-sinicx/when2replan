@@ -8,7 +8,7 @@ export default class Overview extends React.Component {
   render() {
     return (
       <div className="uk-section">
-        <div className="uk-margin-top uk-flex uk-flex-center">
+        <div className="uk-flex uk-flex-center">
           <img src={teaserImg} width="400" height="" alt="" />
         </div>
         <h2>Overview</h2>
