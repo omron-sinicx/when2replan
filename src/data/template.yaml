@@ -3,7 +3,7 @@ twitter: "@omron_sinicx"
 title: "MULTIPOLAR: Multi-Source Policy Aggregation for Transfer Reinforcement Learning between Diverse Environmental Dynamics"
 conference: IJCAI2020
 repo: https://github.com/omron-sinicx/multipolar
-paper: null
+paper: https://arxiv.org/abs/1909.13111
 video: https://www.youtube.com/embed/adUnIj83RtU
 description: explore a new challenge in transfer RL, where only a set of source policies collected under unknown diverse dynamics is available for learning a target task efficiently.
 image: https://omron-sinicx.github.io/multipolar/assets/teaser.png
@@ -22,7 +22,7 @@ authors:
   - name: Masashi Hamaya
     affiliation: [1]
     position: senior researcher
-    url: https://taniai.space/
+    url: https://sites.google.com/view/masashihamaya/home
     #  - name: Mai Nishimura
     #    affiliation: [1]
     #    url: https://denkiwakame.github.io
