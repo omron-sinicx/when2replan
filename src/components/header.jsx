@@ -22,7 +22,7 @@ export default class Header extends React.Component {
             <a className="uk-button uk-button-text uk-margin-medium-left" href="#video">
               <span className="uk-icon" uk-icon="play-circle" /> video
             </a>
-            <a className="uk-button uk-button-text uk-margin-medium-left" uk-tooltip="title: COMING SOON" href={this.props.code} target="_blank">
+            <a className="uk-button uk-button-text uk-margin-medium-left" href={this.props.code} target="_blank">
               <span className="uk-icon" uk-icon="github" /> code
             </a>
           </div>
