@@ -5,7 +5,7 @@ conference: ICML2021
 repo: https://github.com/omron-sinicx/neural-astar
 paper: null
 video: https://www.youtube.com/embed/OB8KE9VXv3s
-description: a Japanese stop-motion short anime series produced by Shin-Ei Animation and Japan Green Hearts in cooperation with Bandai Namco Entertainment.
+description: Neural A*, a novel data-driven search method for path planning problems.
 image: https://omron-sinicx.github.io/neural-astar/assets/teaser.png
 url: https://omron-sinicx.github.io/neural-astar
 authors:
