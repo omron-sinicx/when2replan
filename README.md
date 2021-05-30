@@ -141,5 +141,5 @@ bibtex: >
   - see https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-set-personal-access-token-personal_token
 - register the token as `PERSONAL_TOKEN` at `https://github.com/path/to/your/repo/settings/secrets/actions`
 - `$ git remote add github {your-github-repo-path}`
-- `$ git push github main`
+- `$ git push github main:project-page`
 - set `Source` `Branch=gh-pages` `/(root)` at `https://github.com/path/to/your/repo/settings/pages`
