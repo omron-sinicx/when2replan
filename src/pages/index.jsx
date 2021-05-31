@@ -40,7 +40,7 @@ class Template extends React.Component {
         />
         <div data-uk-sticky className="uk-visible@l">
           <ForkMeOnGitHub
-            repo={data.repo}
+            repo={data.resources.code}
             colorBackground="#999"
             colorOctocat="white"
           />
@@ -50,13 +50,10 @@ class Template extends React.Component {
                 authors={data.authors}
                 affiliations={data.affiliations}
                 meta={data.meta}
-                code={data.repo}
-                video={data.video}
-                paper={data.paper}
-                blog={data.blog}  />
+                resources={data.resources} />
         <div className="uk-container uk-container-small">
           <Overview overview={data.overview} />
-          <Video video={data.video} />
+          <Video video={data.resources.video} />
           <Method method={data.method} />
           <Result results={data.results} />
           <Contact authors={data.authors} contact_ids={data.contact_ids}/>
