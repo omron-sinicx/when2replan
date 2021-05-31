@@ -77,24 +77,27 @@ src/
 
 ### Template
 - fillin values at `src/data/template.yaml`
+- fillin `null` for N/A contents (e.g. `method: null`)
 
-```
+```yaml
 organization: OMRON SINIC X
 twitter: "@omron_sinicx"
 title: Path Planning using Neural A* Search
 conference: ICML2021
-repo: https://github.com/omron-sinicx/neural-astar
-paper: null
-video: https://www.youtube.com/embed/OB8KE9VXv3s
+resources:
+  paper: https://arxiv.org/abs/1909.13111
+  code: https://github.com/omron-sinicx/multipolar
+  video: https://www.youtube.com/embed/adUnIj83RtU
+  blog: https://medium.com/sinicx/multipolar-multi-source-policy-aggregation-for-transfer-reinforcement-learning-between-diverse-bc42a152b0f5
 description: a Japanese stop-motion short anime series produced by Shin-Ei Animation and Japan Green Hearts in cooperation with Bandai Namco Entertainment.
 image: https://omron-sinicx.github.io/neural-astar/assets/teaser.png
 url: https://omron-sinicx.github.io/neural-astar
+speakerdeck: b7a0614c24014dcbbb121fbb9ed234cd   # speakerdeck embed id
 authors:
   - name: Ryo Yonetani*
     affiliation: [1]
     position: principal investigator
     url: https://yonetaniryo.github.io/
-    icon: https://www.omron.com/sinicx/assets/img/members/members_yonetani_thum.jpg
   - name: Tatsunori Taniai*
     affiliation: [1]
     position: senior researcher
@@ -107,10 +110,13 @@ authors:
   - name: Asako Kanezaki
     affiliation: [2]
     url: https://kanezaki.github.io/
+contact_ids: [1]   # 0=1st author 1=2nd author
 affiliations:
   - OMRON SINIC X
   - Technical University of Munich
   - Tokyo Institute of Technology
+meta:
+  - "* work done as an intern at OMRON SINIC X."
 bibtex: >
   @article{DBLP:journals/corr/abs-2009-07476,
     author    = {Ryo Yonetani and
