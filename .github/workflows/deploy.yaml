@@ -6,7 +6,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    continue-on-error: true
     steps:
       - uses: actions/checkout@v1
       - name: Use Node.js 12
@@ -19,6 +18,7 @@ jobs:
       - name: build
         run: |
           npm run build
+        continue-on-error: true
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
