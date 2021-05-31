@@ -1,6 +1,6 @@
 {
   "name": "osx-theme",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "scripts": {
     "dev": "webpack --mode development",
@@ -30,6 +30,9 @@
     "webpack-dev-server": "3.11.2"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "fork-me-on-github": "^1.0.6",
     "normalize.css": "^8.0.1",
     "react": "^16.8.6",

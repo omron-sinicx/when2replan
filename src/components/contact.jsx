@@ -1,6 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
-import omronImg from '../images/omron.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAddressCard, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 class ContactCard extends React.Component {
   constructor(props) { super(props); }
@@ -8,7 +9,7 @@ class ContactCard extends React.Component {
     return (
       <>
         <div className="uk-width-auto">
-          <img className="uk-comment-avatar" src={this.props.author.icon} width="80" height="80" alt="" />
+          <FontAwesomeIcon icon={faAddressCard} size="3x" color="#1C5EB8" />
         </div>
         <div className="uk-width-expand">
           <h4 className="uk-comment-title uk-margin-remove"><a target="_blank" className="uk-link-reset" href={this.props.author.url}>{this.props.author.name}</a></h4>
@@ -27,10 +28,10 @@ class OmronContactCard extends React.Component {
   render() {
     return (
       <>
-        <div className="uk-width-auto uk-visible@m">
-          <img className="uk-comment-avatar" src={omronImg} width="80" height="80" alt="" />
+        <div className="uk-width-auto uk-visible@s">
+          <FontAwesomeIcon icon={faEnvelope} size="3x" color="#1C5EB8" />
         </div>
-        <div className="uk-width-expand uk-visible@m">
+        <div className="uk-width-expand uk-visible@s">
           <h4 className="uk-comment-title uk-margin-remove"><a className="uk-link-reset" href="#">contact@sinicx.com</a></h4>
           <ul className="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
             <li><a href="https://www.omron.com/sinicx/" target="_blank">OMRON SINIC X</a></li>
