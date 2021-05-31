@@ -10,6 +10,7 @@ resources:
 description: explore a new challenge in transfer RL, where only a set of source policies collected under unknown diverse dynamics is available for learning a target task efficiently.
 image: https://omron-sinicx.github.io/multipolar/assets/teaser.png
 url: https://omron-sinicx.github.io/multipolar
+speakerdeck: b7a0614c24014dcbbb121fbb9ed234cd
 authors:
   - name: Mohammadamin Barekatain*
     affiliation: [1, 2]
