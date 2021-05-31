@@ -52,7 +52,8 @@ class Template extends React.Component {
                 meta={data.meta}
                 code={data.repo}
                 video={data.video}
-                paper={data.paper} />
+                paper={data.paper}
+                blog={data.blog}  />
         <div className="uk-container uk-container-small">
           <Overview overview={data.overview} />
           <Video video={data.video} />

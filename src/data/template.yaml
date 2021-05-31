@@ -5,6 +5,7 @@ conference: IJCAI2020
 repo: https://github.com/omron-sinicx/multipolar
 paper: https://arxiv.org/abs/1909.13111
 video: https://www.youtube.com/embed/adUnIj83RtU
+blog: https://medium.com/sinicx/multipolar-multi-source-policy-aggregation-for-transfer-reinforcement-learning-between-diverse-bc42a152b0f5
 description: explore a new challenge in transfer RL, where only a set of source policies collected under unknown diverse dynamics is available for learning a target task efficiently.
 image: https://omron-sinicx.github.io/multipolar/assets/teaser.png
 url: https://omron-sinicx.github.io/multipolar
@@ -13,12 +14,10 @@ authors:
     affiliation: [1, 2]
     url: http://barekatain.me/
     position: intern
-    icon: http://barekatain.me/wp-content/uploads/Amin-copy-624x468.jpg
   - name: Ryo Yonetani
     affiliation: [1]
     position: principal investigator
     url: https://yonetaniryo.github.io/
-    icon: https://www.omron.com/sinicx/assets/img/members/members_yonetani_thum.jpg
   - name: Masashi Hamaya
     affiliation: [1]
     position: senior researcher
