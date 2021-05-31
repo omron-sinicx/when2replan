@@ -5,6 +5,7 @@ export default class Video extends React.Component {
   constructor(props) { super(props); }
 
   render() {
+    if (!this.props.video) return null;
     return (
       <div className="uk-section">
         <h2 id="video">Video</h2>
