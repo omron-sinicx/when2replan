@@ -38,7 +38,7 @@ class Template extends React.Component {
             { name: 'twitter:site', content: data.twitter},
           ]}
         />
-        <div data-uk-sticky className="uk-visible@s">
+        <div data-uk-sticky className="uk-visible@l">
           <ForkMeOnGitHub
             repo={data.repo}
             colorBackground="#999"
