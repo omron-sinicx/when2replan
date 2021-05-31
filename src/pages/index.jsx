@@ -17,7 +17,6 @@ import data from "../data/template.yaml";
 
 class Template extends React.Component {
   render() {
-    console.log(data);
     return (
       <div>
         <Helmet
