@@ -6,6 +6,7 @@ import resultImg2 from '../images/result2.png';
 export default class Results extends React.Component {
   constructor(props) { super(props); }
   render() {
+    if (!this.props.results) return null;
     return (
       <div className="uk-section">
         <h2>Results</h2>

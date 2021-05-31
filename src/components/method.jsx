@@ -6,6 +6,7 @@ export default class Method extends React.Component {
   constructor(props) { super(props); }
 
   render() {
+    if (!this.props.method) return null;
     return (
       <div className="uk-section">
         <h2>Neural A*</h2>
