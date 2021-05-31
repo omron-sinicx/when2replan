@@ -1,15 +1,39 @@
-import React from 'react';
-import {render} from 'react-dom';
+import React from "react";
+import { render } from "react-dom";
 
 export default class Video extends React.Component {
-  constructor(props) { super(props); }
+  constructor(props) {
+    super(props);
+  }
 
   render() {
     if (!this.props.video) return null;
+    const wrapperClass = {
+      overflow: "hidden",
+      "padding-bottom": "56.25%",
+      position: "relative",
+      height: 0,
+    };
+    const innerClass = {
+      left: 0,
+      top: 0,
+      height: "100%",
+      width: "100%",
+      position: "absolute",
+    };
     return (
       <div className="uk-section">
         <h2 id="video">Video</h2>
-        <iframe className="uk-align-center uk-width-2xlarge" width="600" height="350" src={this.props.video} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        <div style={wrapperClass}>
+          <iframe
+            style={innerClass}
+            className="uk-align-center uk-width-1-1"
+            src={this.props.video}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
       </div>
     );
   }
