@@ -57,8 +57,8 @@ class Template extends React.Component {
         />
         <div className="uk-container uk-container-small">
           <Overview overview={data.overview} />
-          <SpeakerDeck dataId={data.speakerdeck} />
           <Video video={data.resources.video} />
+          <SpeakerDeck dataId={data.speakerdeck} />
           <Method method={data.method} />
           <Result results={data.results} />
           <Contact authors={data.authors} contact_ids={data.contact_ids} />
