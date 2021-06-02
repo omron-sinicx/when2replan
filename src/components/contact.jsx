@@ -9,8 +9,8 @@ class ContactCard extends React.Component {
   }
   render() {
     return (
-      <>
-        <div className="uk-width-auto">
+      <div class="uk-width-1-2@s uk-flex">
+        <div className="uk-width-auto uk-margin-right">
           <FontAwesomeIcon icon={faAddressCard} size="3x" color="#1C5EB8" />
         </div>
         <div className="uk-width-expand">
@@ -24,7 +24,7 @@ class ContactCard extends React.Component {
             </a>
           </h4>
           <ul className="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-            <li>
+            <li className="uk-visible@m">
               <a href="#">{this.props.author.position}</a>
             </li>
             <li>
@@ -34,7 +34,7 @@ class ContactCard extends React.Component {
             </li>
           </ul>
         </div>
-      </>
+      </div>
     );
   }
 }
@@ -45,11 +45,11 @@ class OmronContactCard extends React.Component {
   }
   render() {
     return (
-      <>
-        <div className="uk-width-auto uk-visible@s">
+      <div class="uk-width-1-2@s uk-flex">
+        <div className="uk-width-auto uk-margin-right">
           <FontAwesomeIcon icon={faEnvelope} size="3x" color="#1C5EB8" />
         </div>
-        <div className="uk-width-expand uk-visible@s">
+        <div className="uk-width-expand">
           <h4 className="uk-comment-title uk-margin-remove">
             <a className="uk-link-reset" href="#">
               contact@sinicx.com
@@ -63,7 +63,7 @@ class OmronContactCard extends React.Component {
             </li>
           </ul>
         </div>
-      </>
+      </div>
     );
   }
 }
@@ -77,7 +77,7 @@ export default class Contact extends React.Component {
     return (
       <div className="uk-section">
         <h2>Contact</h2>
-        <div className="uk-grid-medium uk-flex-middle" data-uk-grid>
+        <div className="uk-grid-medium" data-uk-grid>
           {this.props.contact_ids.map((cid) => {
             return <ContactCard author={this.props.authors[cid]} />;
           })}
