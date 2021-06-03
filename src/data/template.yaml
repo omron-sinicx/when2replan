@@ -64,9 +64,18 @@ overview: >
   Meanwhile, we learn an auxiliary network that predicts residuals around the aggregated actions, which ensures the target policy”s expressiveness even when some of the source policies perform poorly.
   We demonstrated the effectiveness of MULTIPOLAR through an extensive experimental evaluation across six simulated environments ranging from classic control problems to challenging robotics simulations, under both continuous and discrete action spaces.
 
-method: null
-# method: >
-
+method:
+  - title: subsection1
+    image: method.png
+    text: null
+  - title: subsection2
+    image: null
+    text: >
+      subsection body 2
+  - title: null
+    image: method.png
+    text: >
+      subsection body 2
 results: null
 # results:
 #   - This is a result description text.
