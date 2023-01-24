@@ -30,7 +30,7 @@ export default class Video extends React.Component {
             className="uk-align-center uk-width-1-1"
             src={this.props.video}
             frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
         </div>

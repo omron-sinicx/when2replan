@@ -4,12 +4,21 @@
   "description": "",
   "scripts": {
     "dev": "webpack --mode development",
+    "clean": "rm -rf build/",
     "build": "webpack --mode production",
     "postbuild": "react-snap",
     "serve": "webpack serve --mode development"
   },
   "author": "Mai Nishimura <mai.nishimura@sinicx.com>",
   "license": "MIT License",
+  "reactSnap": {
+    "puppeteerArgs": [
+      "--disable-setuid-sandbox",
+      "--no-sandbox"
+    ],
+    "concurrency": 1,
+    "inlineCss": false
+  },
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.4",
