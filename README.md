@@ -3,6 +3,7 @@
 
 ### Setup
 - Install latest `node.js` and `npm`
+- Confirmed versions: `Node.js >= v10.19.0` `npm >=7.5.1`
 
 ##### Ubuntu / WSL2 Ubuntu
 
@@ -29,6 +30,7 @@ $ source ~/.bash_profile
 
 ```sh
 $ npm install # install dependencies
+$ npm run clean
 $ npm run build
 $ npm run serve
 ```
