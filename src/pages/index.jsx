@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import Header from "../components/header.jsx";
 import Overview from "../components/overview.jsx";
 import Video from "../components/video.jsx";
+import Player from "../components/react-player.jsx";
 import Method from "../components/method.jsx";
 import Result from "../components/results.jsx";
 import Contact from "../components/contact.jsx";
@@ -13,7 +14,7 @@ import Citation from "../components/citation.jsx";
 import SpeakerDeck from "../components/speakerdeck.jsx";
 import ForkMeOnGitHub from "fork-me-on-github";
 
-import data from "../data/template.yaml";
+import data from "../../template.yaml";
 
 class Template extends React.Component {
   render() {
@@ -59,6 +60,7 @@ class Template extends React.Component {
           <Video video={data.resources.video} />
           <SpeakerDeck dataId={data.speakerdeck} />
           <Method method={data.method} />
+          <Player demo={data.demo} />
           <Result results={data.results} />
           <Contact authors={data.authors} contact_ids={data.contact_ids} />
           <Citation bibtex={data.bibtex} />
