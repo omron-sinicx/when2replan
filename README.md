@@ -48,6 +48,7 @@ $ npm run serve
 ### Structure
 
 ```
+template.yaml    # template arguments
 src/
 ├── components          # React components loaded in index.jsx
 │   ├── authors.jsx
@@ -59,8 +60,6 @@ src/
 │   ├── overview.jsx
 │   ├── results.jsx
 │   └── video.jsx
-├── data
-│   └── template.yaml    # template arguments
 ├── html
 │   └── index.html
 ├── images               # images to be relocated to assets/ by file-loader
@@ -68,6 +67,8 @@ src/
 │   ├── result1.png
 │   ├── result2.png
 │   └── teaser.png
+├── videos
+│   └── result1.mp4
 ├── js
 │   └── styles.js        # embed styles to js
 ├── pages
@@ -78,7 +79,7 @@ src/
 ```
 
 ### Template
-- fillin values at `src/data/template.yaml`
+- fillin values at `template.yaml`
 - fillin `null` for N/A contents (e.g. `method: null`)
 
 ```yaml

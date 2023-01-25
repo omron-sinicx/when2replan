@@ -76,9 +76,21 @@ method:
     image: method.png
     text: >
       subsection body 2
+
 results: null
 # results:
 #   - This is a result description text.
 #   - This is a result1 description text.
 #   - This is a result2 description text.
 #   - This is a result3 description text.
+
+demo:
+  - mp4: result1.mp4
+    text: demo text1 demo text1 demo text1
+    scale: 100%
+  - mp4: result1.mp4
+    text: demo text2 demo text2 demo text2
+    scale: 100%
+  - mp4: result1.mp4
+    text: demo text3 demo text3 demo text3
+    scale: 80%

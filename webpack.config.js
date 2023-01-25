@@ -15,6 +15,7 @@ module.exports = {
     hot: true,
     watchContentBase: true,
     liveReload: true,
+    host: "0.0.0.0",
     port: 8080,
     contentBase: path.join(__dirname, "build"),
   },
@@ -48,7 +49,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(jpe?g|png|gif|svg|mp4)$/i,
         loader: "file-loader",
         options: {
           name: "/assets/[name].[ext]",
