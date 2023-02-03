@@ -21,7 +21,7 @@ export default class Slider extends React.Component {
       >
         <div
           className="uk-position-relative uk-visible-toggle uk-light"
-          tabindex="-1"
+          tabIndex="-1"
         >
           {this.props.children}
         </div>

@@ -28,13 +28,13 @@ export default class Method extends React.Component {
   render() {
     return this.props.method ? (
       <div className="uk-section">
-        {this.props.method.map((subsection) => {
+        {this.props.method.map((subsection, idx) => {
           return (
-            <>
+            <div key={"subsection-" + idx}>
               <Content title={subsection.title} />
               <Content image={subsection.image} />
               <Content text={subsection.text} />
-            </>
+            </div>
           );
         })}
       </div>
