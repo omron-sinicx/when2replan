@@ -10,7 +10,7 @@ export default class Video extends React.Component {
     if (!this.props.video) return null;
     const wrapperClass = {
       overflow: "hidden",
-      "padding-bottom": "56.25%",
+      paddingBottom: "56.25%",
       position: "relative",
       height: 0,
     };

@@ -17,9 +17,9 @@ export default class Authors extends React.Component {
           className="uk-text-primary uk-text-center uk-flex-center uk-grid-collapse"
           data-uk-grid
         >
-          {this.props.authors.map((author) => {
+          {this.props.authors.map((author, idx) => {
             return (
-              <span className={authorClass}>
+              <span className={authorClass} key={"author-" + idx}>
                 <a target="_blank" className="uk-link-toggle" href={author.url}>
                   {author.name}
                 </a>
@@ -34,7 +34,7 @@ export default class Authors extends React.Component {
         >
           {this.props.affiliations.map((affiliation, idx) => {
             return (
-              <span className={affliationClass}>
+              <span className={affliationClass} key={"affiliation-" + idx}>
                 <sup>{idx + 1}</sup>
                 {affiliation}
               </span>

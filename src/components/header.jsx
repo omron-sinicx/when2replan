@@ -68,7 +68,11 @@ export default class Header extends React.Component {
           />
           <div className="uk-flex uk-flex-center uk-margin-top">
             {Object.keys(this.props.resources).map((key) => (
-              <ResourceBtn url={this.props.resources[key]} title={key} />
+              <ResourceBtn
+                url={this.props.resources[key]}
+                title={key}
+                key={"header-" + key}
+              />
             ))}
           </div>
         </div>

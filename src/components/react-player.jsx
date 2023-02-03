@@ -14,9 +14,9 @@ export default class Player extends React.Component {
         <h2>Demo</h2>
         <Slider>
           <ul className="uk-slider-items">
-            {this.props.demo.map((d) => {
+            {this.props.demo.map((d, idx) => {
               return (
-                <li className="uk-panel">
+                <li className="uk-panel" key={"mp4-" + idx}>
                   <ReactPlayer
                     className="react-player uk-align-center"
                     url={require("../videos/" + d.mp4)}

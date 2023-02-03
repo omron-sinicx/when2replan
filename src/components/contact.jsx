@@ -9,7 +9,7 @@ class ContactCard extends React.Component {
   }
   render() {
     return (
-      <div class="uk-width-1-2@s uk-flex">
+      <div className="uk-width-1-2@s uk-flex">
         <div className="uk-width-auto uk-margin-right">
           <FontAwesomeIcon icon={faAddressCard} size="3x" color="#1C5EB8" />
         </div>
@@ -45,7 +45,7 @@ class OmronContactCard extends React.Component {
   }
   render() {
     return (
-      <div class="uk-width-1-2@s uk-flex">
+      <div className="uk-width-1-2@s uk-flex">
         <div className="uk-width-auto uk-margin-right">
           <FontAwesomeIcon icon={faEnvelope} size="3x" color="#1C5EB8" />
         </div>
@@ -79,7 +79,12 @@ export default class Contact extends React.Component {
         <h2>Contact</h2>
         <div className="uk-grid-medium" data-uk-grid>
           {this.props.contact_ids.map((cid) => {
-            return <ContactCard author={this.props.authors[cid]} />;
+            return (
+              <ContactCard
+                author={this.props.authors[cid]}
+                key={"contact-" + cid}
+              />
+            );
           })}
           <OmronContactCard />
         </div>
