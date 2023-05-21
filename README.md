@@ -3,17 +3,23 @@
 
 ### Setup
 - Install latest `node.js` and `npm`
-- Confirmed versions: `Node.js >= v10.19.0` `npm >=7.5.1`
+- Confirmed versions: `Node.js >= v16.17.0` `npm >=8.15.0`
 
 ##### Ubuntu / WSL2 Ubuntu
+- Install **node v16+** via [n command](https://github.com/tj/n)
 
 ```sh
 $ sudo apt update
-$ sudo apt install -y nodejs npm
+$ sudo apt install -y nodejs
 $ nodejs -v
-v10.19.0
+v16.17.0
 $ npm -v
-7.5.1
+8.15.0
+$ sudo apt install n -g
+$ sudo n 18.16.0 # or sudo n lts
+$ node --version
+v18.16.0
+$ sudo apt purge nodejs npm
 ```
 
 ##### Mac OS X
