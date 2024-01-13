@@ -4,6 +4,14 @@
 ### Setup
 - Install latest `node.js` and `npm`
 - Confirmed versions: `Node.js >= v16.17.0` `npm >=8.15.0`
+- In case you use version manager:
+
+```bash
+$ curl https://get.volta.sh/ | bash
+# restart your shell...
+$ volta install node@20.11.0
+$ volta pin node@20.11.0
+```
 
 ##### Ubuntu / WSL2 Ubuntu
 - Install **node v16+** via [n command](https://github.com/tj/n)
