@@ -13,11 +13,12 @@ module.exports = {
   },
   devServer: {
     hot: true,
-    watchContentBase: true,
     liveReload: true,
     host: "0.0.0.0",
     port: 8080,
-    contentBase: path.join(__dirname, "build"),
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -30,6 +31,7 @@ module.exports = {
     rules: [
       {
         test: /\.jsx$/i,
+        exclude: "/node_modules/",
         use: {
           loader: "babel-loader",
         },
