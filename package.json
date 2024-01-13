@@ -6,7 +6,7 @@
     "dev": "webpack --mode development",
     "clean": "rm -rf build/",
     "build": "webpack --mode production",
-    "postbuild": "rm build/200.html && react-snap",
+    "postbuild": "react-snap",
     "serve": "webpack serve --mode development",
     "format": "prettier -w src/ --check",
     "lint": "eslint src/"

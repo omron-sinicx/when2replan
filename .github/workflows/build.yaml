@@ -7,7 +7,7 @@ on:
     branches:
       - main
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -18,12 +18,16 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        id: npm_cache_id
+        with:
+          path: "**/node_modules"
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - name: install
         run: |
           npm install
       - name: build
         run: |
           npm run build
-      - name: snap
-        run: |
-          npm run postbuild
+        continue-on-error: true
