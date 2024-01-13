@@ -1,6 +1,10 @@
 ## osx-project-page-template
 - A project page template based on [UIKit](https://getuikit.com/) + [React](https://ja.reactjs.org/)
 
+### for WSL
+- `react-snap` launches Headless Chromium by [puppeteer](https://pptr.dev/) for pre-rendering React app.
+- `$ sudo apt install -y libgtk2.0-0 libgtk-3-0 libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb libgbm-dev fonts-ipafont`
+
 ### Setup
 - Install latest `node.js` and `npm`
 - Confirmed versions: `Node.js >= v16.17.0` `npm >=8.15.0`
