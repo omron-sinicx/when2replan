@@ -1,6 +1,6 @@
-import React from "react";
-import { render } from "react-dom";
-import UIkit from "uikit";
+import React from 'react';
+import { render } from 'react-dom';
+import UIkit from 'uikit';
 
 export default class Slider extends React.Component {
   componentDidMount() {

@@ -1,6 +1,6 @@
-import React from "react";
-import { render } from "react-dom";
-import teaserImg from "../images/teaser.png";
+import React from 'react';
+import { render } from 'react-dom';
+import teaserImg from '../images/teaser.png';
 
 export default class Overview extends React.Component {
   constructor(props) {

@@ -1,5 +1,5 @@
-import React from "react";
-import { render } from "react-dom";
+import React from 'react';
+import { render } from 'react-dom';
 
 export default class SpeakerDeck extends React.Component {
   constructor(props) {
@@ -13,11 +13,11 @@ export default class SpeakerDeck extends React.Component {
         <div
           style={{
             left: 0,
-            width: "100%",
+            width: '100%',
             height: 0,
-            position: "relative",
-            paddingBottom: "56.1987%",
-            marginBottom: "2rem",
+            position: 'relative',
+            paddingBottom: '56.1987%',
+            marginBottom: '2rem',
           }}
         >
           <iframe
@@ -26,9 +26,9 @@ export default class SpeakerDeck extends React.Component {
               border: 0,
               top: 0,
               left: 0,
-              width: "100%",
-              height: "100%",
-              position: "absolute",
+              width: '100%',
+              height: '100%',
+              position: 'absolute',
             }}
             frameBorder="0"
             allowFullScreen

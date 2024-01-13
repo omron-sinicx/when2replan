@@ -11,7 +11,7 @@ $base-pre-background: #f8f8f8;
 $base-pre-border: 0 solid #e5e5e5;
 $base-pre-border-radius: 0;
 $base-pre-font-size: 12px;
-$base-pre-font-family: "Roboto Mono", monospace;
+$base-pre-font-family: 'Roboto Mono', monospace;
 
 // sections
 $section-padding-vertical-m: 25px;
@@ -23,9 +23,9 @@ $tooltip-border-radius: 5px;
 // $global-font-size: clamp(16px,4vw,16px);
 // $global-medium-font-size: clamp(15px,1vw,18px); // comment-font-size
 
-$omron-color: #1C5EB8;
+$omron-color: #1c5eb8;
 
-$theme-color: #282C34;
+$theme-color: #282c34;
 $theme-color-fg: #eee;
 $button-text-color: $theme-color-fg;
 $button-text-hover-color: #fff;
@@ -38,12 +38,11 @@ $button-primary-background: $theme-color;
 $global-primary-background: $omron-color;
 $text-primary-color: $theme-color-fg;
 
-
 // default variables and mixins
-@import "uikit/src/scss/variables-theme.scss";
-@import "uikit/src/scss/mixins-theme.scss";
+@import 'uikit/src/scss/variables-theme.scss';
+@import 'uikit/src/scss/mixins-theme.scss';
 
 // import uikit
-@import "uikit/src/scss/uikit.scss";
-@import "~normalize.css/normalize.css";
+@import 'uikit/src/scss/uikit.scss';
+@import '~normalize.css/normalize.css';
 // @import "uikit/src/scss/uikit-theme.scss";

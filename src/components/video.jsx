@@ -1,5 +1,5 @@
-import React from "react";
-import { render } from "react-dom";
+import React from 'react';
+import { render } from 'react-dom';
 
 export default class Video extends React.Component {
   constructor(props) {
@@ -9,17 +9,17 @@ export default class Video extends React.Component {
   render() {
     if (!this.props.video) return null;
     const wrapperClass = {
-      overflow: "hidden",
-      paddingBottom: "56.25%",
-      position: "relative",
+      overflow: 'hidden',
+      paddingBottom: '56.25%',
+      position: 'relative',
       height: 0,
     };
     const innerClass = {
       left: 0,
       top: 0,
-      height: "100%",
-      width: "100%",
-      position: "absolute",
+      height: '100%',
+      width: '100%',
+      position: 'absolute',
     };
     return (
       <div className="uk-section">

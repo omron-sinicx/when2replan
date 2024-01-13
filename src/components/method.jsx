@@ -1,5 +1,5 @@
-import React from "react";
-import { render } from "react-dom";
+import React from 'react';
+import { render } from 'react-dom';
 
 class Content extends React.Component {
   constructor(props) {
@@ -11,7 +11,7 @@ class Content extends React.Component {
     if (this.props.image)
       return (
         <img
-          src={require("../images/" + this.props.image)}
+          src={require('../images/' + this.props.image)}
           className="uk-align-center uk-responsive-width"
           alt=""
         />
@@ -30,7 +30,7 @@ export default class Method extends React.Component {
       <div className="uk-section">
         {this.props.method.map((subsection, idx) => {
           return (
-            <div key={"subsection-" + idx}>
+            <div key={'subsection-' + idx}>
               <Content title={subsection.title} />
               <Content image={subsection.image} />
               <Content text={subsection.text} />

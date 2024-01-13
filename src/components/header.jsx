@@ -1,8 +1,8 @@
-import React from "react";
-import { render } from "react-dom";
-import Authors from "../components/authors.jsx";
-import { FaGithub, FaYoutube, FaMedium } from "react-icons/fa6";
-import { FaFilePdf } from "react-icons/fa";
+import React from 'react';
+import { render } from 'react-dom';
+import Authors from '../components/authors.jsx';
+import { FaGithub, FaYoutube, FaMedium } from 'react-icons/fa6';
+import { FaFilePdf } from 'react-icons/fa';
 
 class ResourceBtn extends React.Component {
   constructor(props) {
@@ -17,7 +17,7 @@ class ResourceBtn extends React.Component {
   render() {
     if (!this.props.url) return null;
     const aClass =
-      this.props.title == "paper"
+      this.props.title == 'paper'
         ? `uk-button uk-button-text`
         : `uk-button uk-button-text uk-margin-medium-left`; // FIXME
     const FaIcon = this.icons[this.props.title];
@@ -41,7 +41,7 @@ export default class Header extends React.Component {
 
   render() {
     const titleClass = `uk-${
-      this.props.title.length > 100 ? "h2" : "h1"
+      this.props.title.length > 100 ? 'h2' : 'h1'
     } uk-text-primary`;
     return (
       <div className="uk-cover-container uk-background-secondary">
@@ -62,7 +62,7 @@ export default class Header extends React.Component {
               <ResourceBtn
                 url={this.props.resources[key]}
                 title={key}
-                key={"header-" + key}
+                key={'header-' + key}
               />
             ))}
           </div>

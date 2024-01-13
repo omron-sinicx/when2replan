@@ -1,7 +1,7 @@
-import React from "react";
-import ReactPlayer from "react-player/lazy";
-import Slider from "../components/slider.jsx";
-import { render } from "react-dom";
+import React from 'react';
+import ReactPlayer from 'react-player/lazy';
+import Slider from '../components/slider.jsx';
+import { render } from 'react-dom';
 
 export default class Player extends React.Component {
   constructor(props) {
@@ -16,10 +16,10 @@ export default class Player extends React.Component {
           <ul className="uk-slider-items">
             {this.props.demo.map((d, idx) => {
               return (
-                <li className="uk-panel" key={"mp4-" + idx}>
+                <li className="uk-panel" key={'mp4-' + idx}>
                   <ReactPlayer
                     className="react-player uk-align-center"
-                    url={require("../videos/" + d.mp4)}
+                    url={require('../videos/' + d.mp4)}
                     width={d.scale}
                     height={d.scale}
                     playing={true}
