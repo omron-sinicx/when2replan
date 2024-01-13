@@ -38,7 +38,7 @@
     "prettier": "^3.2.1",
     "prettier-plugin-organize-imports": "^3.2.4",
     "react-hot-loader": "^4.13.1",
-    "react-snap": "^0.2.0",
+    "react-snap": "^1.13.1",
     "sass": "^1.69.7",
     "sass-loader": "^13.3.3",
     "style-loader": "^3.3.4",
