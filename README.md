@@ -1,6 +1,6 @@
 # sinicx-template
-[![build](https://github.com/omron-sinicx/projectpage-template/actions/workflows/build.yaml/badge.svg)](https://github.com/omron-sinicx/projectpage-template/actions/workflows/build.yaml)
-- A project page template using [React](https://ja.reactjs.org/) + [UIKit](https://getuikit.com/) 
+[![build](https://github.com/omron-sinicx/projectpage-template/actions/workflows/build.yaml/badge.svg)](https://github.com/omron-sinicx/projectpage-template/actions/workflows/build.yaml) [![build](https://github.com/omron-sinicx/projectpage-template/actions/workflows/lint.yaml/badge.svg)](https://github.com/omron-sinicx/projectpage-template/actions/workflows/lint.yaml)
+- A project page template using [React](https://ja.reactjs.org/) + [UIKit](https://getuikit.com/)
 - **Demo**: ⛅[light-theme](https://omron-sinicx.github.io/ncf2/) 🕶️[dark-theme](https://omron-sinicx.github.io/ctrm/)
 
 > [!TIP]
