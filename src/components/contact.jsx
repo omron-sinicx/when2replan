@@ -1,7 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAddressCard, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FaAddressCard, FaEnvelope } from "react-icons/fa6";
 
 class ContactCard extends React.Component {
   constructor(props) {
@@ -11,7 +10,7 @@ class ContactCard extends React.Component {
     return (
       <div className="uk-width-1-2@s uk-flex">
         <div className="uk-width-auto uk-margin-right">
-          <FontAwesomeIcon icon={faAddressCard} size="3x" color="#1C5EB8" />
+          <FaAddressCard size="3em" color="#1C5EB8" />
         </div>
         <div className="uk-width-expand">
           <h4 className="uk-comment-title uk-margin-remove">
@@ -47,7 +46,7 @@ class OmronContactCard extends React.Component {
     return (
       <div className="uk-width-1-2@s uk-flex">
         <div className="uk-width-auto uk-margin-right">
-          <FontAwesomeIcon icon={faEnvelope} size="3x" color="#1C5EB8" />
+          <FaEnvelope size="3em" color="#1C5EB8" />
         </div>
         <div className="uk-width-expand">
           <h4 className="uk-comment-title uk-margin-remove">

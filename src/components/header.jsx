@@ -1,23 +1,17 @@
 import React from "react";
 import { render } from "react-dom";
 import Authors from "../components/authors.jsx";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faYoutube,
-  faMedium,
-} from "@fortawesome/free-brands-svg-icons";
-import { faFilePdf } from "@fortawesome/free-solid-svg-icons";
+import { FaGithub, FaYoutube, FaMedium } from "react-icons/fa6";
+import { FaFilePdf } from "react-icons/fa";
 
 class ResourceBtn extends React.Component {
   constructor(props) {
     super(props);
     this.icons = {
-      paper: faFilePdf,
-      code: faGithub,
-      video: faYoutube,
-      blog: faMedium,
+      paper: FaFilePdf,
+      code: FaGithub,
+      video: FaYoutube,
+      blog: FaMedium,
     };
   }
   render() {
@@ -26,14 +20,11 @@ class ResourceBtn extends React.Component {
       this.props.title == "paper"
         ? `uk-button uk-button-text`
         : `uk-button uk-button-text uk-margin-medium-left`; // FIXME
+    const FaIcon = this.icons[this.props.title];
     return (
       <>
         <a className={aClass} href={this.props.url} target="_blank">
-          <FontAwesomeIcon
-            icon={this.icons[this.props.title]}
-            size="lg"
-            color="#1C5EB8"
-          />
+          <FaIcon size="2em" color="#1C5EB8" />
           <span className="uk-margin-small-left uk-margin-small-right uk-text-primary uk-text-bolder">
             {this.props.title}
           </span>

@@ -1,13 +1,15 @@
 {
-  "name": "osx-theme",
+  "name": "sinicx-template",
   "version": "0.0.1",
   "description": "",
   "scripts": {
     "dev": "webpack --mode development",
     "clean": "rm -rf build/",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode production",
+    "build": "webpack --mode production",
     "postbuild": "react-snap",
-    "serve": "NODE_OPTIONS=--openssl-legacy-provider webpack serve --mode development"
+    "serve": "webpack serve --mode development",
+    "format": "prettier -w src/ --check",
+    "lint": "eslint src/"
   },
   "author": "Mai Nishimura <mai.nishimura@sinicx.com>",
   "license": "MIT License",
@@ -19,36 +21,38 @@
     "concurrency": 1,
     "inlineCss": false
   },
+  "volta": {
+    "node": "20.11.0"
+  },
   "devDependencies": {
-    "@babel/core": "^7.14.3",
-    "@babel/preset-env": "^7.14.4",
-    "@babel/preset-react": "^7.13.13",
-    "babel-loader": "^8.2.2",
-    "css-loader": "^5.2.4",
+    "@babel/preset-env": "^7.23.8",
+    "@babel/preset-react": "^7.23.3",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.9.0",
+    "eslint": "^8.56.0",
     "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.3.1",
+    "html-webpack-plugin": "^5.6.0",
     "js-yaml-loader": "^1.2.2",
-    "react-hot-loader": "^4.13.0",
-    "react-snap": "^1.23.0",
-    "sass": "^1.32.12",
-    "sass-loader": "^11.1.0",
-    "style-loader": "^2.0.0",
+    "prettier": "^3.2.1",
+    "react-hot-loader": "^4.13.1",
+    "react-snap": "^1.13.1",
+    "sass": "^1.69.7",
+    "sass-loader": "^13.3.3",
+    "style-loader": "^3.3.4",
     "url-loader": "^4.1.1",
-    "webpack": "5.37.0",
-    "webpack-cli": "^4.7.0",
-    "webpack-dev-server": "3.11.2"
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.35",
-    "@fortawesome/free-brands-svg-icons": "^5.15.3",
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "@fortawesome/react-fontawesome": "^0.1.14",
     "fork-me-on-github": "^1.0.6",
     "normalize.css": "^8.0.1",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^16.14.0",
     "react-helmet": "^6.1.0",
-    "react-player": "^2.11.0",
-    "uikit": "^3.6.21"
+    "react-icons": "^5.0.1",
+    "react-player": "^2.14.1",
+    "sharp": "^0.33.2",
+    "swiper": "^11.0.5",
+    "uikit": "^3.17.11"
   }
 }
