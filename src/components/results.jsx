@@ -1,7 +1,7 @@
-import React from "react";
-import { render } from "react-dom";
-import resultImg1 from "../images/result1.png";
-import resultImg2 from "../images/result2.png";
+import React from 'react';
+import { render } from 'react-dom';
+import resultImg1 from '../images/result1.png';
+import resultImg2 from '../images/result2.png';
 
 export default class Results extends React.Component {
   constructor(props) {

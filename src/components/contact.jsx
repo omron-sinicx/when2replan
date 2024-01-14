@@ -1,6 +1,6 @@
-import React from "react";
-import { render } from "react-dom";
-import { FaAddressCard, FaEnvelope } from "react-icons/fa6";
+import React from 'react';
+import { render } from 'react-dom';
+import { FaAddressCard, FaEnvelope } from 'react-icons/fa6';
 
 class ContactCard extends React.Component {
   constructor(props) {
@@ -81,7 +81,7 @@ export default class Contact extends React.Component {
             return (
               <ContactCard
                 author={this.props.authors[cid]}
-                key={"contact-" + cid}
+                key={'contact-' + cid}
               />
             );
           })}

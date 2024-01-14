@@ -1,5 +1,5 @@
-import React from "react";
-import { render } from "react-dom";
+import React from 'react';
+import { render } from 'react-dom';
 
 export default class Citation extends React.Component {
   constructor(props) {

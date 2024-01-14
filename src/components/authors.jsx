@@ -1,5 +1,5 @@
-import React from "react";
-import { render } from "react-dom";
+import React from 'react';
+import { render } from 'react-dom';
 
 export default class Authors extends React.Component {
   constructor(props) {
@@ -19,11 +19,11 @@ export default class Authors extends React.Component {
         >
           {this.props.authors.map((author, idx) => {
             return (
-              <span className={authorClass} key={"author-" + idx}>
+              <span className={authorClass} key={'author-' + idx}>
                 <a target="_blank" className="uk-link-toggle" href={author.url}>
                   {author.name}
                 </a>
-                <sup>{author.affiliation.join(",")}</sup>
+                <sup>{author.affiliation.join(',')}</sup>
               </span>
             );
           })}
@@ -34,7 +34,7 @@ export default class Authors extends React.Component {
         >
           {this.props.affiliations.map((affiliation, idx) => {
             return (
-              <span className={affliationClass} key={"affiliation-" + idx}>
+              <span className={affliationClass} key={'affiliation-' + idx}>
                 <sup>{idx + 1}</sup>
                 {affiliation}
               </span>
