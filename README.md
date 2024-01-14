@@ -1,70 +1,59 @@
-## osx-project-page-template
-- A project page template based on [UIKit](https://getuikit.com/) + [React](https://ja.reactjs.org/)
+# sinicx-template
+[![build](https://github.com/omron-sinicx/projectpage-template/actions/workflows/build.yaml/badge.svg)](https://github.com/omron-sinicx/projectpage-template/actions/workflows/build.yaml)
+- A project page template using [React](https://ja.reactjs.org/) + [UIKit](https://getuikit.com/) 
+- **Demo**: ⛅[light-theme](https://omron-sinicx.github.io/ncf2/) 🕶️[dark-theme](https://omron-sinicx.github.io/ctrm/)
 
-### for WSL
-- `react-snap` launches Headless Chromium by [puppeteer](https://pptr.dev/) for pre-rendering React app.
-- `$ sudo apt install -y libgtk2.0-0 libgtk-3-0 libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb libgbm-dev fonts-ipafont`
+> [!TIP]
+> You can switch themes by selecting [theme scss files](https://github.com/omron-sinicx/projectpage-template/blob/update-package-versions/src/js/styles.js#L1-L2)
 
-### Setup
-- Install latest `node.js` and `npm`
-- Confirmed versions: `Node.js >= v16.17.0` `npm >=8.15.0`
-- In case you use version manager:
-
+## Prerequisites
+- Before you begin, ensure you have met the following requirements:
+### 🪟WSL 🐧Linux 🍎MacOS
+#### Install nodejs>=20 using [node version manager](https://volta.sh/)
 ```bash
 $ curl https://get.volta.sh/ | bash
 # restart your shell...
 $ volta install node@20.11.0
 $ volta pin node@20.11.0
-```
 
-##### Ubuntu / WSL2 Ubuntu
-- Install **node v16+** via [n command](https://github.com/tj/n)
-
-```sh
-$ sudo apt update
-$ sudo apt install -y nodejs
-$ nodejs -v
-v16.17.0
-$ npm -v
-8.15.0
-$ sudo apt install n -g
-$ sudo n 18.16.0 # or sudo n lts
 $ node --version
-v18.16.0
-$ sudo apt purge nodejs npm
+v20.11.0
+$ npm --version
+10.2.4
+```
+#### Install puppeteer dependencies
+- react-snap uses Headless Chromium through puppeteer to [pre-render React apps](https://blog.logrocket.com/pre-rendering-react-app-react-snap/).
+
+```bash
+sudo apt install -y libgtk2.0-0 libgtk-3-0 libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb libgbm-dev fonts-ipafont
 ```
 
-##### Mac OS X
+## Usage
+### Installation
+- Clone this repository
 
 ```sh
-$ brew install nodebrew
-$ nodebrew install-binary latest
-$ echo 'export PATH=$PATH:$HOME/.nodebrew/current/bin' >> ~/.bash_profile
-$ source ~/.bash_profile
+$ npm install
 ```
-
 ### Build
-- open `localhost:8080` by your browser
-
 ```sh
-$ npm install # install dependencies
 $ npm run clean
 $ npm run build
 $ npm run serve
 ```
 
 ### Develop
-
 ```sh
 $ npm run serve
 ```
 
 ### Customize
-- modify UIKit variables at `src/scss/theme.scss`
-  - see https://github.com/uikit/uikit/blob/bc6dd1851652e5b77387a1efefc16cea6e3d165b/src/scss/variables.scss
+- You can change styles without writing css. Modify [UIKit variables](https://github.com/uikit/uikit/blob/bc6dd1851652e5b77387a1efefc16cea6e3d165b/src/scss/variables.scss) at `src/scss/theme.scss`
+- You can extend `*.jsx` files using these assets or custom React Components.
+  - UIKit Components https://getuikit.com/docs/introduction
+  - React-Icons https://react-icons.github.io/react-icons/
 
 ### Structure
-
 ```
 template.yaml    # template arguments
 src/
@@ -158,20 +147,19 @@ bibtex: >
   }
 ```
 
-### Available Style Components in UIKit
-- see https://getuikit.com/docs/introduction
-
-### How to release your project page automatically by GitHub Actions
-#### Preliminary
+## Release your project page automatically by GitHub Actions
 - **We have already created organization token for omron-sinicx** https://github.com/organizations/omron-sinicx/settings/secrets/actions
   - **Just in case the token above is unavailable:** generate personal access token by yourself
     - see https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-set-personal-access-token-personal_token
     - register the token as `PERSONAL_TOKEN` at `https://github.com/path/to/your/repo/settings/secrets/actions`
 
-#### Release project-page
+### Release project-page
 - `$ git remote add github {your-github-repo-path}`
 - `$ git push github {local-project-page-branch}:project-page`
   - GitHub Action atuomatically build HTML on `project-page` branch, and then send it to `gh-pages` branch.
   - All you need to do is to push your project page code to `project-page` branch on your GitHub repo.
-#### If the project page is not released automatically:
+### If the project page is not released automatically:
 - set `Source` `Branch=gh-pages` `/(root)` at `https://github.com/path/to/your/repo/settings/pages`
+
+## Contributions
+Pull requests and bug reports are welcome. Feel free to [open issues](https://github.com/omron-sinicx/projectpage-template/issues)
