@@ -30,7 +30,7 @@ authors:
     #  - name: Asako Kanezaki
     #    affiliation: [2]
     #    url: https://kanezaki.github.io/
-contact_ids: [1] #=> 2nd author
+contact_ids: ['github', 'omron', 2] #=> github issues, contact@sinicx.com, 2nd author
 affiliations:
   - OMRON SINIC X Corporation
   - Technical University of Munich
@@ -67,7 +67,7 @@ overview: >
 method:
   - title: subsection1
     image: method.png
-    text: null
+    text: test text with unicode characters α, β, φ, ψ 
   - title: subsection2
     image: null
     text: >
