@@ -1,6 +1,6 @@
 organization: OMRON SINIC X
-twitter: "@omron_sinicx"
-title: "MULTIPOLAR: Multi-Source Policy Aggregation for Transfer Reinforcement Learning between Diverse Environmental Dynamics"
+twitter: '@omron_sinicx'
+title: 'MULTIPOLAR: Multi-Source Policy Aggregation for Transfer Reinforcement Learning between Diverse Environmental Dynamics'
 conference: IJCAI2020
 resources:
   paper: https://arxiv.org/abs/1909.13111
@@ -35,7 +35,7 @@ affiliations:
   - OMRON SINIC X Corporation
   - Technical University of Munich
 meta:
-  - "* work done as an intern at OMRON SINIC X."
+  - '* work done as an intern at OMRON SINIC X.'
 bibtex: >
   # arXiv version
 
@@ -65,13 +65,18 @@ overview: >
   We demonstrated the effectiveness of MULTIPOLAR through an extensive experimental evaluation across six simulated environments ranging from classic control problems to challenging robotics simulations, under both continuous and discrete action spaces.
 
 method:
-  - title: subsection1
+  - title: subsection 1
     image: method.png
-    text: test text with unicode characters α, β, φ, ψ 
-  - title: subsection2
+    text: >
+      **test text with unicode characters:** α, β, φ, ψ
+  - title: subsection 2
     image: null
     text: >
-      subsection body 2
+      **test text with TeX characters:** $\alpha$, $\beta$, $\phi$, $\psi \\$
+      see how it renders with $\KaTeX$.
+      $$ E = mc^2$$
+      $$ \int \oint \sum \prod $$
+      $$ \begin{CD} A @>a>> B \\ @VbVV @AAcA \\ C @= D \end{CD} $$
   - title: null
     image: method.png
     text: >
