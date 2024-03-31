@@ -71,13 +71,17 @@ class Template extends React.Component {
           resources={data.resources}
         />
         <div className="uk-container uk-container-small">
-          <Overview overview={data.overview} description={data.description}/>
+          <Overview overview={data.overview} description={data.description} />
           <Video video={data.resources.video} />
           <SpeakerDeck dataId={data.speakerdeck} />
           <Method method={data.method} />
           <Player demo={data.demo} />
           <Result results={data.results} />
-          <Contact authors={data.authors} contact_ids={data.contact_ids}  resources={data.resources}/>
+          <Contact
+            authors={data.authors}
+            contact_ids={data.contact_ids}
+            resources={data.resources}
+          />
           <Citation bibtex={data.bibtex} />
         </div>
         <Footer />
