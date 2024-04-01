@@ -75,8 +75,8 @@ class Template extends React.Component {
           <Video video={data.resources.video} />
           <SpeakerDeck dataId={data.speakerdeck} />
           <Method method={data.method} />
-          <Player demo={data.demo} />
           <Result results={data.results} />
+          <Player demo={data.demo} />
           <Contact
             authors={data.authors}
             contact_ids={data.contact_ids}

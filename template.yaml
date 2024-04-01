@@ -80,14 +80,125 @@ method:
   - title: null
     image: method.png
     text: >
-      subsection body 2
+      This is a multi-line text example.
+      "> - Flow Style" converts newlines to spaces.
+      Using >, newline characters are converted to spaces.
+      Newline characters and indentation are handled appropriately, and the text is represented as a single line.
+      It's suitable when you want to collapse multi-line text into a single line, such as in configurations or descriptions where readability is key.
+  - text: |
+      This is a multi-line
+      text example.
+      "| - Block Style" preserves newlines and indentation.
+      Using |, you can represent multi-line text that includes newline characters.
+      Newline characters are preserved exactly as they are, along with the block's indentation.
+      It's suitable when maintaining newlines and indentation is important, such as preserving the structure of code or prose.
 
-results: null
-# results:
-#   - This is a result description text.
-#   - This is a result1 description text.
-#   - This is a result2 description text.
-#   - This is a result3 description text.
+results:
+  - text: |
+      <h3>Motion Planning (MP) Dataset</h3>
+      <p>dummy text</p>
+      <div class="uk-overflow-auto">
+        <table class="uk-table uk-table-small uk-text-small uk-table-divider">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Opt</th>
+              <th>Exp</th>
+              <th>Hmean</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                BF
+                <br />
+                WA*
+              </td>
+              <td>
+                65.8 (63.8, 68.0)
+                <br />
+                68.4 (66.5, 70.4)
+              </td>
+              <td>
+                44.1 (42.8, 45.5)
+                <br />
+                35.8 (34.5, 37.1)
+              </td>
+              <td>
+                44.8 (43.4, 46.3)
+                <br />
+                40.4 (39.0, 41.8)
+              </td>
+            </tr>
+            <tr>
+              <td>
+                SAIL
+                <br />
+                SAIL-SL
+                <br />
+                BB-A*
+              </td>
+              <td>
+                5.7 (4.6, 6.8)
+                <br />
+                3.1 (2.3, 3.8)
+                <br />
+                31.2 (28.8, 33.5)
+              </td>
+              <td>
+                58.0 (56.1, 60.0)
+                <br />
+                57.6 (55.7, 59.6)
+                <br />
+                52.0 (50.2, 53.9)
+              </td>
+              <td>
+                7.7 (6.4, 9.0)
+                <br />
+                4.4 (3.5, 5.3)
+                <br />
+                31.1 (29.2, 33.0)
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Neural BF
+                <br />
+                <b>Neural A*</b>
+              </td>
+              <td>
+                75.5 (73.8, 77.1)
+                <br />
+                <b>87.7 (86.6, 88.9)</b>
+              </td>
+              <td>
+                45.9 (44.6, 47.2)
+                <br />
+                40.1 (38.9, 41.3)
+              </td>
+              <td>
+                52.0 (50.7, 53.4)
+                <br />
+                52.0 (50.7, 53.3)
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h3>Selected Path Planning Results</h3>
+      <p>dummy text</p>
+      <img
+        src="assets/result1.png"
+        class="uk-align-center uk-responsive-width"
+        alt=""
+      />
+      <h3>Path Planning Results on SSD Dataset</h3>
+      <p>dummy text</p>
+      <img
+        src="assets/result2.png"
+        class="uk-align-center uk-responsive-width"
+        alt=""
+      />
 
 demo:
   - mp4: result1.mp4
