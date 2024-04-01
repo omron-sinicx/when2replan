@@ -95,8 +95,16 @@ method:
 
 results:
   - text: |
+      ### Motion Planning (MP) Dataset
+      markdown version
+      |Method|Opt|Exp|Hmean|
+      |--|--|--|--|
+      |BF| 65.8 (63.8, 68.0)| 44.1 (42.8, 45.5) | 44.8 (43.4, 46.3)|
+      |WA*| 68.4 (66.5, 70.4)| 35.8 (34.5, 37.1) | 40.4 (39.0, 41.8)|
+      |**Neural A*** | **87.7 (86.6, 88.9)**| 40.1 (38.9, 41.3) | 52.0 (50.7, 53.3)|
+
       <h3>Motion Planning (MP) Dataset</h3>
-      <p>dummy text</p>
+      <p>HTML version</p>
       <div class="uk-overflow-auto">
         <table class="uk-table uk-table-small uk-text-small uk-table-divider">
           <thead>
