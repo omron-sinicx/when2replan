@@ -1,5 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { marked } from 'marked';
+import markedKatex from 'marked-katex-extension';
+marked.use(markedKatex({ throwOnError: false }));
 
 class Content extends React.Component {
   constructor(props) {
@@ -7,7 +10,12 @@ class Content extends React.Component {
   }
   render() {
     if (this.props.title) return <h2>{this.props.title}</h2>;
-    if (this.props.text) return <p>{this.props.text}</p>;
+    if (this.props.text)
+      return (
+        <div
+          dangerouslySetInnerHTML={{ __html: marked.parse(this.props.text) }}
+        />
+      );
     if (this.props.image)
       return (
         <img
