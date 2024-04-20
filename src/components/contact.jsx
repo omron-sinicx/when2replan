@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { FaAddressCard, FaEnvelope } from 'react-icons/fa6';
+import { FaAddressCard, FaEnvelope, FaGithub } from 'react-icons/fa6';
 
 class ContactCard extends React.Component {
   constructor(props) {
@@ -10,7 +10,9 @@ class ContactCard extends React.Component {
     return (
       <div className="uk-width-1-2@s uk-flex">
         <div className="uk-width-auto uk-margin-right">
-          <FaAddressCard size="3em" color="#1C5EB8" />
+          <a target="_blank" href={this.props.author.url}>
+            <FaAddressCard size="3em" color="#1C5EB8" />
+          </a>
         </div>
         <div className="uk-width-expand">
           <h4 className="uk-comment-title uk-margin-remove">
@@ -50,9 +52,7 @@ class OmronContactCard extends React.Component {
         </div>
         <div className="uk-width-expand">
           <h4 className="uk-comment-title uk-margin-remove">
-            <a className="uk-link-reset" href="#">
-              contact@sinicx.com
-            </a>
+            <a className="uk-link-reset">contact@sinicx.com</a>
           </h4>
           <ul className="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
             <li>
@@ -67,6 +67,38 @@ class OmronContactCard extends React.Component {
   }
 }
 
+class GithubContactCard extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div className="uk-width-1-2@s uk-flex">
+        <div className="uk-width-auto uk-margin-right">
+          <a target="_blank" href={this.props.url}>
+            <FaGithub size="3em" color="#1C5EB8" />
+          </a>
+        </div>
+        <div className="uk-width-expand">
+          <h4 className="uk-comment-title uk-margin-remove">
+            <a
+              className="uk-link-reset"
+              target="_blank"
+              href={this.props.issues}
+            >
+              GitHub issues
+            </a>
+          </h4>
+          <ul className="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+            <a href={this.props.repo} target="_blank">
+              <li>GitHub.com</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+    );
+  }
+}
 export default class Contact extends React.Component {
   constructor(props) {
     super(props);
@@ -78,14 +110,25 @@ export default class Contact extends React.Component {
         <h2>Contact</h2>
         <div className="uk-grid-medium" data-uk-grid>
           {this.props.contact_ids.map((cid) => {
-            return (
-              <ContactCard
-                author={this.props.authors[cid]}
-                key={'contact-' + cid}
-              />
-            );
+            if (cid == 'omron') {
+              return <OmronContactCard key={'contact-omron'} />;
+            } else if (cid == 'github') {
+              return (
+                <GithubContactCard
+                  repo={this.props.resources.code}
+                  issues={this.props.resources.code + '/issues'}
+                  key={'conatct-github'}
+                />
+              );
+            } else {
+              return (
+                <ContactCard
+                  author={this.props.authors[cid - 1]}
+                  key={'contact-' + cid - 1}
+                />
+              );
+            }
           })}
-          <OmronContactCard />
         </div>
       </div>
     );
