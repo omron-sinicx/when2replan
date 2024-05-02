@@ -19,7 +19,7 @@ export default class Results extends React.Component {
   render() {
     return this.props.results ? (
       <div className="uk-section">
-        <h2 id="results">Results</h2>
+        <h2 id="results">Evaluation</h2>
         {this.props.results.map((result, idx) => {
           return (
             <div
