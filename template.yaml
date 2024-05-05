@@ -62,7 +62,50 @@ method:
 
 results:
   - text: |
+      ### v.s. Conventional Replanning Strategies
+      <div uk-grid>
+        <div>
+          Distance-based
+          <video
+            src="assets/distancebased.mp4"
+            width="250px"
+            class="uk-align-center uk-responsive-width"
+            uk-video
+            loop
+            muted
+          />
+        </div>
+        <div>
+          Stuck-based
+          <video
+            src="assets/stuckbased.mp4"
+            width="250px"
+            class="uk-align-center uk-responsive-width"
+            uk-video
+            loop
+            muted
+          />
+        </div>
+        <div>
+          Time-based
+          <video
+            src="assets/timebased.mp4"
+            width="250px"
+            class="uk-align-center uk-responsive-width"
+            uk-video="autoplay:inview"
+            loop
+            muted
+          />
+        </div>
+      </div>
+  - text: |
       We conduct a comprehensive simulation study to systematically evaluate the existing planning strategies and the DRL replanner.
+      In this work, we compare four types of rule-based replanning available in ROS2 Navigation Stack.
+      - Distance-based: determines replanning timings on the basis of traveled distance.
+      - Stuck-based: decides to execute replans when the robot stops at the same position for a given $\Delta t_{\text{stuck}}$ seconds.
+      - Time-based: performs replanning at every fixed period of $\Delta t_{\text{rep}}$ seconds.
+      - Time w/patience: adopts *time-based* strategy when the robot is far rom the goal and changes to *stuck-based* otherwise, expecting to prevent a large detour near the goal.
+  - text: |
       <h3>Selected Simulation Results</h3>
       <div uk-grid>
         <div class="uk-overflow-auto">
@@ -113,7 +156,7 @@ results:
                 </td>
               </tr>
               <tr class="uk-active">
-                <td class="uk-text-bold">Ours</td>
+                <td class="uk-text-bold">Ours (DRL Replanner)</td>
                 <td class="uk-text-bold">77</td>
                 <td class="uk-text-bold">4</td>
                 <td class="uk-text-bold">0.563</td>
@@ -174,6 +217,19 @@ results:
         </div>
       </div>
 
+  - text: |
+      |Metric||
+      |------|------|
+      |SR|Success Rate over 100 trials, where success is defined as the robot reaching the goal without collision.|
+      |CR|Collision Rate over 100 trials.|
+      |SGT|Success-weighted by normalized Goal Time.|
+      |SPL|Averate Success-weighted normalized Path Length in the number of trials (100).|
+      |NR|Number of Replanning over 100 trials.
+  - text: |
+      The table lists the quantitave evaluation results of 100 trials for each map layout with Dijkstra (Global) and DWA (Local) planners.
+      Our DRL replanner, which learns from its experiences to seek better replanning timings, works comparably well or sometimes substantially bettern than the other rule-based strategies in each environment.
+
+  - text: |
       ### Results on 16-Pillar Map
       <img
         src="assets/result_16pillars.svg"
