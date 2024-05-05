@@ -49,7 +49,7 @@ overview: |
 
 method:
   - title: Adaptive Replanning using Deep Reinforcement Learning
-    image: overview.svg
+    image: overview.png
     text: >
       We derive a replanning controller that can learn from its previous navigation experiences to create a better replanning
       timing for navigation efficiency and robustness. As illustrated in the following figure,
@@ -64,34 +64,29 @@ results:
   - text: |
       ### v.s. Conventional Replanning Strategies
       <div uk-grid>
-        <div>
-          Distance-based
+        <div class="uk-width-1-3 uk-text-center">
+          <span class="uk-label uk-label-default">Distance-based</span>
           <video
             src="assets/distancebased.mp4"
-            width="250px"
-            class="uk-align-center uk-responsive-width"
             uk-video
             loop
             muted
           />
         </div>
-        <div>
-          Stuck-based
+        <div class="uk-width-1-3 uk-text-center">
+          <span class="uk-label uk-label-default">Stuck-based</span>
           <video
             src="assets/stuckbased.mp4"
-            width="250px"
-            class="uk-align-center uk-responsive-width"
             uk-video
             loop
             muted
           />
         </div>
-        <div>
-          Time-based
+        <div class="uk-width-1-3 uk-text-center">
+          <span class="uk-label uk-label-default">Time-based</span>
           <video
             src="assets/timebased.mp4"
             width="250px"
-            class="uk-align-center uk-responsive-width"
             uk-video="autoplay:inview"
             loop
             muted
@@ -230,15 +225,52 @@ results:
       Our DRL replanner, which learns from its experiences to seek better replanning timings, works comparably well or sometimes substantially bettern than the other rule-based strategies in each environment.
 
   - text: |
-      ### Results on 16-Pillar Map
-      <img
-        src="assets/result_16pillars.svg"
-        class="uk-align-center uk-responsive-width"
-        alt=""
-      />
-      ### Results on 25-Pillar Map
-      <img
-        src="assets/result_25pillars.svg"
-        class="uk-align-center uk-responsive-width"
-        alt=""
-      />
+      ### v.s. Stuck-based Replanning
+      <div uk-grid>
+        <div class="uk-width-1-2 uk-text-center">
+          <span class="uk-label uk-label-danger">Ours (DRL Replanner)</span>
+          <video
+            src="assets/n16-ours.mp4"
+            uk-video
+            loop
+            muted
+          />
+        </div>
+        <div class="uk-width-1-2 uk-text-center">
+          <span class="uk-label uk-label-default">Stuck-based</span>
+           <video
+             src="assets/n16-stuckbased.mp4"
+             uk-video
+             loop
+             muted
+           />
+        </div>
+      </div>
+      The stuck-based replanner can aggressively head towards the goal, especially when dynamic obstacles move out of the way. However, replanning after detecting a stuck situation is inefficient. In contrast, our method replans before getting stuck and quickly reaches the goal.
+
+      ### v.s. Time-based Replanning
+      <div uk-grid>
+        <div class="uk-width-1-2 uk-text-center">
+          <span class="uk-label uk-label-danger">Ours (DRL Replanner)</span>
+          <video
+            src="assets/n9-ours.mp4"
+            width="300px"
+            class="uk-align-center uk-responsive-width"
+            uk-video
+            loop
+            muted
+          />
+        </div>
+        <div class="uk-width-1-2 uk-text-center">
+          <span class="uk-label uk-label-default">Time-based</span>
+          <video
+            src="assets/n9-timebased.mp4"
+            width="300px"
+            class="uk-align-center uk-responsive-width"
+            uk-video
+            loop
+            muted
+          />
+        </div>
+      </div>
+      While the time-based method is efficient in scenes where obstacles are stationary, as it always tracks the shortest distance, in dynamic scenes, unnecessary replanning can lead to path oscillation, and cases where it fails to reach the goal have been observed. On the other hand, our proposed method efficiently reaches the goal by replanning only at key points.
