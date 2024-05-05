@@ -55,7 +55,7 @@ method:
       timing for navigation efficiency and robustness. As illustrated in the following figure,
       the replanner’s action is essentially the same as that of existing replanning strategies, i.e., binary actions indicating whether or not to execute replanning to produce
       a new reference path for the local planner after the current
-      time step $k$. In other words, the replanner can potentially be
+      time step. In other words, the replanner can potentially be
       utilized as a replacement module for the replanning strategy
       in existing planning frameworks, thus making it compatible
       with various combinations of planners and other modules.
@@ -254,7 +254,6 @@ results:
           <span class="uk-label uk-label-danger">Ours (DRL Replanner)</span>
           <video
             src="assets/n9-ours.mp4"
-            width="300px"
             class="uk-align-center uk-responsive-width"
             uk-video
             loop
@@ -265,7 +264,6 @@ results:
           <span class="uk-label uk-label-default">Time-based</span>
           <video
             src="assets/n9-timebased.mp4"
-            width="300px"
             class="uk-align-center uk-responsive-width"
             uk-video
             loop
