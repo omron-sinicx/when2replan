@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 // import teaser from '../images/teaser.svg';
-import teaser from '../images/teaser.png';
+import teaser from '../images/teaser.gif';
 
 import { marked } from 'marked';
 import markedKatex from 'marked-katex-extension';
@@ -17,7 +17,7 @@ export default class Overview extends React.Component {
         <img
           src={teaser}
           className="uk-align-center"
-          width="450px"
+          width="800px"
           height=""
           alt=""
         />
