@@ -1,0 +1,78 @@
+# Parameters for training
+
+navigation_config: "config/navigation/train/simplest/simplest_5.yaml"
+
+rl_config: "config/rl_params/default.yaml"
+
+rl_model: "DQN-PRB" # DQN or PPO or A2C, DQN-HER, DQN-PRB
+process_type: "Parallel" # Parallel or Single
+train_mode: "new" # new or continue or imitation, imitation: pre-trained by Behavior Cloning
+total_timesteps: 5e6
+env_id: "NavigationStackEnv-v0"
+# env_id: "NavigationStackGoalEnv-v0"
+num_cpu: 20
+log_dir: "log"
+model_name: "best_model.zip"
+tensor_board_path: "tensorboard"
+model_save_freq: 10000
+tensorboard_check_freq: 100
+verbose: 1 # 0: no output, 1: info, 2: debug
+seed: 10000
+net_arch: [256, 256] # network architecture
+
+imitation_config:
+  # NOTE: Imitation learning (IL) is only available for PPO
+  # collect expert data
+  is_collect_expert_data: True
+  num_episodes: 100
+  trajectory_path: "expert_trajectories.pkl"
+  num_expert_eval_episodes: 10
+  # pre-train by Behavior Cloning (BC)
+  is_pre_train: True
+  num_train_epochs: 100
+  bc_policy_path: "bc_policy"
+
+# PPO parameters
+ppo_params:
+  learning_rate: 0.0003
+  # learning_rate: 0.000001
+  n_steps: 2048
+  batch_size: 64
+  n_epochs: 10
+  gamma: 0.99
+  gae_lambda: 0.95
+  # clip_range: 0.2
+  clip_range: 0.1
+  normalize_advantage: True
+  # normalize_advantage: False
+  ent_coef: 0.0
+  vf_coef: 0.5
+  max_grad_norm: 0.5
+  use_sde: False
+  sde_sample_freq: -1
+
+# DQN parameters
+dqn_params:
+  learning_rate: 1e-4
+  buffer_size: 2e5
+  learning_starts: 1e4
+  batch_size: 32
+  train_freq: 4
+  target_update_interval: 5e3
+
+# HER parameters
+her_params:
+  n_sampled_goal: 4
+  goal_selection_strategy: "future" # future or final
+
+# Prioritized Replay Buffer parameters
+prb_params:
+  prioritized_error: "q_error" # q_error or td_error
+  alpha: 0.6
+  initial_beta: 0.4
+  beta_increment: 0.00001
+
+# maps
+is_generate_random_map: False
+random_map_num: 100
+map_config: "config/map_creator/train_map.yaml"

@@ -1,0 +1,34 @@
+# Parameters for RL
+
+reward:
+  # positive
+  sgt_reward: 1.0 # [-] weight for success weighted by normalized goal time
+  spl_reward: 0.0 # [-] weight for success weighted by normalized path length
+  speed_reward: 0.0 # [s/m] weight for speed reward
+
+  # Penalty, should be negative
+  collision_penalty: 0.0 # [/step] weight for collision penalty
+  replan_penalty: 0.0 # [/event] weight for update global planner
+
+observation:
+  dim_scan: 20 # [-] number of scan points
+  num_scans: 1 # [-] number of accumulated scans
+  scan_interval: 0.25 # [s] Interval between two scans to be accumulated
+  accumulated_scan_horizon: 0.25 # [s] Horizon of accumulated scans
+  dim_previous_path: 5 # [-] Number of previous path points used for observation
+  range_previous_path: 50 # [-] Horizon of previous path points, i.e. use the number of points from current position
+  dim_reference_path: 5 # [-] Number of reference path points used for observation
+  num_reference_path: 1 # [-] Number of reference path used for observation
+  range_reference_path: 150 # [-] Horizon of reference path points, i.e. use the number of points from current position
+  dim_goal: 2 # [-] dimension of goal point used for observation
+  dim_global_planner_status: 0 # [-] dimension of global planner status used for observation
+  dim_current_pose: 3 # [-] dimension of current pose for HER
+  ### observation dim = 2*(dim_scan * num_scans + dim_previous_path + dim_reference_path) + dim_goal + dim_global_planner_status
+
+action:
+  num_actions: 2 # [-] number of actions [0: not update reference path, 1: update reference path]
+
+counterfactual:
+  is_counterfactual: False # [-] whether to use counterfactual method
+  prediction_horizon: 10 # [-] prediction horizon step size for counterfactual
+  prediction_interval: 0.1 # [s] prediction interval step size for counterfactual, NOTE: NOT implemented yet

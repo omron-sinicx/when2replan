@@ -1,0 +1,98 @@
+# ゴール到達が不可能な場合があるシナリオ
+name: "simplest_3"
+known_static_map: "maps/simplest"
+random_map_mode: True
+# unknown_static_obs: "maps/star.yaml"
+# NOTE: known_static_map and unknown_static_obs must be the same size and resolution
+start_pose_type: "specified" # "candidates" or "specified" or "random"
+start_pose:
+  x: 3.0
+  y: 5.0
+  yaw: -0.75
+goal_pose_type: "specified" # "candidates" or "specified" or "random"
+goal_pose:
+  x: 20
+  y: 20
+  yaw: 0.0
+start_pose_candidates:
+
+goal_pose_candidates:
+
+start_pose_constraints:
+  x:
+    max: 22
+    min: 22
+  yaw:
+    max: 3.14
+    min: -3.14
+
+goal_pose_constraints:
+  x:
+    max: 22
+    min: 3
+  y:
+    max: 22
+    min: 3
+  yaw:
+    max: 3.14
+    min: -3.14
+
+moving_obstacles:
+  type: "candidates_pickup" # "candidates" or "all" or "random"
+  num: 2
+  candidates:
+    - type: "must"
+      shape: "circle"
+      size: [3.0, 0]
+      motion_model: "point_mass_model"
+      x: 12
+      y: 21
+      yaw: 0.0
+      vx: 0.0
+      vy: 0.0
+      vyaw: 0.0
+    - type: "maybe"
+      shape: "circle"
+      size: [3.0, 0]
+      motion_model: "point_mass_model"
+      x: 12
+      y: 21
+      yaw: 0.0
+      vx: 0.0
+      vy: 0.0
+      vyaw: 0.0
+    - type: "maybe"
+      shape: "circle"
+      size: [3.0, 0]
+      motion_model: "point_mass_model"
+      x: 21
+      y: 12
+      yaw: 0.0
+      vx: 0.0
+      vy: 0.0
+      vyaw: 0.0
+
+  constraints:
+    size:
+      max: [1.0, 0.0]
+      min: [1.0, 0.0]
+    position:
+      x:
+        max: 25
+        min: 0
+      y:
+        max: 25
+        min: 0
+      yaw:
+        max: 3.14
+        min: -3.14
+    velocity:
+      vx:
+        max: 1.0
+        min: -1.0
+      vy:
+        max: 1.0
+        min: -1.0
+      vyaw:
+        max: 1.0
+        min: -1.0
