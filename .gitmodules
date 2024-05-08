@@ -1,4 +1,0 @@
-[submodule "thirdparty/stable-baselines3"]
-	path = thirdparty/stable-baselines3
-	url = git@github.com:kohonda/stable-baselines3.git
-    branch = dev/counterfactual
