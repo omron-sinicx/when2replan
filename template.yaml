@@ -4,13 +4,13 @@ title: 'When to Replan? An Adaptive Replanning Strategy for Autonomous Navigatio
 conference: ICRA2024
 resources:
   paper: https://arxiv.org/abs/2304.12046
-  code: https://github.com/omron-sinicx/whn2replan # FIXME
+  code: https://github.com/omron-sinicx/when2replan # FIXME
   video: https://www.youtube.com/embed/W8nBFKDxsb0
   blog: # TODO
 description: evaluated different replanning strategies and propose an adaptive replanning strategy using deep reinforcement learning
-image: https://omron-sinicx.github.io/whn2replan/assets/overview.png
+image: https://omron-sinicx.github.io/when2replan/assets/overview.png
 url:
-  https://omron-sinicx.github.io/whn2replan
+  https://omron-sinicx.github.io/when2replan
   # speakerdeck: b7a0614c24014dcbbb121fbb9ed234cd
 authors:
   - name: Kohei Honda*
