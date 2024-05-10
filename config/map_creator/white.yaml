@@ -1,0 +1,14 @@
+# common map parameters
+# map size = [width, height] x resolution [m]
+common:
+  height: 250
+  width: 250
+  resolution: 0.1
+  maptype: "simplest" # "indoor" or "outdoor" or "simplest"
+  map_name: "white"
+  save_dir: "maps/white"
+
+# simplest map parameters
+simplest:
+  obstacle_positions: []
+  obstacle_sizes: []

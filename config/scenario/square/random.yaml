@@ -1,0 +1,81 @@
+name: "square_random"
+known_static_map: "maps/square/map.yaml"
+random_map_mode: False
+min_path_length_ratio: 0.5 # [-] minimum path length ratio to the map size
+# unknown_static_obs: "maps/star.yaml"
+# NOTE: known_static_map and unknown_static_obs must be the same size and resolution
+start_pose_type: "random" # "candidates" or "specified" or "random"
+start_pose:
+  x: -10.0
+  y: 10.0
+  yaw: -0.75
+goal_pose_type: "random" # "candidates" or "specified" or "random"
+goal_pose:
+  x: 10.0
+  y: -10.0
+  yaw: 0.0
+
+start_pose_candidates:
+
+goal_pose_candidates:
+
+start_pose_constraints:
+  x:
+    max: 10
+    min: -10
+  y:
+    max: 10
+    min: -10
+  yaw:
+    max: 3.14
+    min: -3.14
+
+goal_pose_constraints:
+  x:
+    max: 10
+    min: -10
+  y:
+    max: 10
+    min: -10
+  yaw:
+    max: 3.14
+    min: -3.14
+
+moving_obstacles:
+  type: "random" # "candidates" or "all" or "random"
+  num: 8
+  candidates:
+    - id: 0
+      shape: "circle"
+      size: [1.0, 0]
+      motion_model: "point_mass_model"
+      x: 0.0
+      y: -7.0
+      yaw: 0.0
+      vx: 1.0
+      vy: 0.0
+      vyaw: 1.0
+  constraints:
+    size:
+      max: [2.0, 0.0]
+      min: [0.5, 0.0]
+    position:
+      x:
+        max: 10
+        min: -10
+      y:
+        max: 10
+        min: -10
+      yaw:
+        max: 3.14
+        min: -3.14
+    velocity:
+      vx:
+        max: 2.0
+        min: -2.0
+      vy:
+        max: 1.0
+        min: -1.0
+      vyaw:
+        max: 1.0
+        min: -1.0

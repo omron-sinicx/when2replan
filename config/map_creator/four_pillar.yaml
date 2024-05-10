@@ -1,0 +1,14 @@
+# common map parameters
+# map size = [width, height] x resolution [m]
+common:
+  height: 250
+  width: 250
+  resolution: 0.1
+  maptype: "uniform" # "indoor" or "outdoor" or "simplest"
+  map_name: "four_pillar"
+  save_dir: "maps/four_pillar"
+
+# simplest map parameters
+uniform:
+  obstacle_num: [2, 2]
+  obstacle_size: 30

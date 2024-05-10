@@ -1,0 +1,80 @@
+# parameters for run
+
+run:
+  log_root_dir: "log"
+  log_save_dir: "run"
+  model_dir: "model"
+  model_name: "best_model.zip"
+  env_id: "NavigationStackEnv-v0"
+  rl_algorithm: "DQN" # DQN or PPO or A2C
+  rl_config: "config/rl_params/default.yaml"
+  navigation_scenarios: ["config/scenario/sixteen_pillar/random.yaml"]
+
+  method_list: [
+      "rl_based_replan",
+      "time_based_replan",
+      "time_based_replan_patience",
+      "stuck_based_replan",
+      "distance_based_replan",
+      # "random_based_replan",
+      "no_replan",
+    ]
+  save_animation: False
+  save_figure: False
+  view_animation: True
+  visualize_mode: "birdeye" # 'birdeye' or 'observation' or 'train'
+  movie_type: "mp4" # mp4 or gif
+  seeds: [0]
+
+navigation:
+  common:
+    max_episode_steps: 500
+    global_planner_calculation_interval: 10 # [step] calculation time interval for global planner
+    global_planner: "Dijkstra" # "Dijkstra" or "RRT" or "RRT-star" or "PRM"
+    local_planner: "DWA" # "DWA" or "MPC"
+    control_interval_time: 0.1 # [s]
+    robot_radius: 1.0 # [m]
+    inflation_radius: 0.1 # [m] inflation radius with robot radius for global and local planner
+
+  baseline_params:
+    time_triggered_replan_threshold: 10 # [-] must >= global_planner_calculation_interval [step]
+    stuck_replan_time_threshold: 3 # [s] if robot is stuck over this time, replan
+    distance_replan_threshold: 1.0 # [m] Replan every the robot move this distance
+    patience_dist_threshold: 3.0 # [m] if the robot is close to the goal, replan based on stuck time
+    patience_time_threshold: 5 # [s] if the robot is close to the goal, replan when stuck time is over this time
+
+  handmade_detection:
+    # Stuck
+    stuck_check_interval: 1.0 # [s]
+    stuck_radius: 0.5 # [m]
+    # oscillation
+    oscillation_check_interval: 1.0 # [s]
+    oscillation_detect_time: 4.0 # [s] if robot continue to oscillate over time, it seems oscillate
+    oscillation_goal_dist_threshold: 0.5 # [m] if the robot is close to the goal, not detect oscillation
+    flipping_angle_threshold: 0.02 # [rad/s]
+    flipping_count_num: 10 # number of flipping counter deque
+    flipping_num_threshold: 3 # if the robot flips over this number, it seems oscillate
+
+  dwa_config:
+    # DWA parameters
+    vel_x_limit:
+      max: 2.0 # [m/s]
+      min: 0.0 # [m/s]
+    vel_y_limit:
+      max: 0.1 # [m/s]
+      min: -0.1 # [m/s]
+    vel_theta_limit:
+      max: 2.0 # [rad/s]
+      min: -2.0 # [rad/s]
+    vel_x_samples: 5
+    vel_y_samples: 3
+    vel_theta_samples: 8
+    # weights
+    path_distance_bias: 1.0
+    path_angle_bias: 0.0
+    sub_goal_distance_bias: 1.0
+    sub_goal_angle_bias: 0.0001
+
+  dijkstra_config:
+    # Dijkstra parameters
+    connectedness: 8 # 4, 8, 16, or 32

@@ -1,0 +1,26 @@
+# common map parameters
+# map size = [width, height] x resolution [m]
+common:
+  height: 100
+  width: 100
+  resolution: 0.25
+  save_dir: "maps/random"
+
+# indoor and outdoor map number rate
+random:
+  outdoor_map_rate: 1.0
+
+# indoor map parameters
+indoor:
+  corridor_radius: 5 # corridor diameter = 1+2*corridor_radius
+  iterations: 50 # number of nodes for the indoor map algorithm
+  room_number: 1
+  room_width: 100
+  room_height: 100
+  no_overlap: True # whether or not rooms are allowed to overlap
+
+# outdoor map parameters
+outdoor:
+  obstacle_number: 30 # number of outdoor obstacles
+  obstacle_extra_radius: 1 # obstacle diameter = 1+2*obstacle_extra_radius
+
