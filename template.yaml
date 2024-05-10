@@ -8,7 +8,7 @@ resources:
   video: https://www.youtube.com/embed/W8nBFKDxsb0
   blog: # TODO
 description: evaluated different replanning strategies and propose an adaptive replanning strategy using deep reinforcement learning
-image: https://omron-sinicx.github.io/when2replan/assets/overview.png
+image: https://omron-sinicx.github.io/when2replan/assets/teaser.gif
 url:
   https://omron-sinicx.github.io/when2replan
   # speakerdeck: b7a0614c24014dcbbb121fbb9ed234cd
