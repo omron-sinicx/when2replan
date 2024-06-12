@@ -1,6 +1,5 @@
 import React from 'react';
 import { render } from 'react-dom';
-import teaserImg from '../images/teaser.png';
 
 import { marked } from 'marked';
 import markedKatex from 'marked-katex-extension';
@@ -14,10 +13,8 @@ export default class Overview extends React.Component {
     return (
       <div className="uk-section">
         <img
-          src={teaserImg}
-          className="uk-align-center"
-          width="700px"
-          height=""
+          src={require('../images/' + this.props.teaser)}
+          className="uk-align-center uk-responsive-width"
           alt=""
         />
         {this.props.description && (

@@ -55,6 +55,7 @@ bibtex: >
     year={2020}
   }
 
+teaser: teaser.png
 overview: |
   Transfer reinforcement learning (RL) aims at improving learning efficiency of an agent by exploiting knowledge from other source agents trained on relevant tasks.
   However, it remains challenging to transfer knowledge between different environmental dynamics without having access to the source environments.
@@ -64,7 +65,7 @@ overview: |
   Meanwhile, we learn an auxiliary network that predicts residuals around the aggregated actions, which ensures the target policy”s expressiveness even when some of the source policies perform poorly.
   We demonstrated the effectiveness of MULTIPOLAR through an extensive experimental evaluation across six simulated environments ranging from classic control problems to challenging robotics simulations, under both continuous and discrete action spaces.
 
-method:
+body:
   - title: subsection 1
     image: method.png
     text: >
@@ -92,9 +93,8 @@ method:
       Using |, you can represent multi-line text that includes newline characters.
       Newline characters are preserved exactly as they are, along with the block's indentation.
       It's suitable when maintaining newlines and indentation is important, such as preserving the structure of code or prose.
-
-results:
-  - text: |
+  - title: Results
+    text: |
       ### Motion Planning (MP) Dataset
       markdown version
       |Method|Opt|Exp|Hmean|
@@ -207,14 +207,3 @@ results:
         class="uk-align-center uk-responsive-width"
         alt=""
       />
-
-demo:
-  - mp4: result1.mp4
-    text: demo text1 demo text1 demo text1
-    scale: 100%
-  - mp4: result1.mp4
-    text: demo text2 demo text2 demo text2
-    scale: 100%
-  - mp4: result1.mp4
-    text: demo text3 demo text3 demo text3
-    scale: 80%
