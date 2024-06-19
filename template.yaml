@@ -68,7 +68,7 @@ results:
           <span class="uk-label uk-label-default">Distance-based</span>
           <video
             src="assets/distancebased.mp4"
-            uk-video
+            uk-video="autoplay:inview"
             loop
             muted
           />
@@ -77,7 +77,7 @@ results:
           <span class="uk-label uk-label-default">Stuck-based</span>
           <video
             src="assets/stuckbased.mp4"
-            uk-video
+            uk-video="autoplay:inview"
             loop
             muted
           />
@@ -231,7 +231,7 @@ results:
           <span class="uk-label uk-label-danger">Ours (DRL Replanner)</span>
           <video
             src="assets/n16-ours.mp4"
-            uk-video
+            uk-video="autoplay:inview"
             loop
             muted
           />
@@ -240,7 +240,7 @@ results:
           <span class="uk-label uk-label-default">Stuck-based</span>
            <video
              src="assets/n16-stuckbased.mp4"
-             uk-video
+             uk-video="autoplay:inview"
              loop
              muted
            />
@@ -255,7 +255,7 @@ results:
           <video
             src="assets/n9-ours.mp4"
             class="uk-align-center uk-responsive-width"
-            uk-video
+            uk-video="autoplay:inview"
             loop
             muted
           />
@@ -265,7 +265,7 @@ results:
           <video
             src="assets/n9-timebased.mp4"
             class="uk-align-center uk-responsive-width"
-            uk-video
+            uk-video="autoplay:inview"
             loop
             muted
           />
