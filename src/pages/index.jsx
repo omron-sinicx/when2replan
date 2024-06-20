@@ -35,16 +35,17 @@ class Template extends React.Component {
               property: 'og:description',
               content: data.description,
             },
-            { property: 'og:image', content: data.image }, // FIXME
-            { property: 'og:image:width', content: '912' },
-            { property: 'og:image:height', content: '618' },
+            { property: 'og:image', content: data.image },
+            { property: 'og:image:alt', content: data.description },
+            { property: 'og:image:width', content: '1200' },
+            { property: 'og:image:height', content: '600' },
             { property: 'og:url', content: data.url },
             {
               name: 'twitter:card',
               content: 'summary_large_image',
             },
             { name: 'twitter:title', content: data.title },
-            { name: 'twitter:image', content: data.image },
+            { name: 'twitter:image:src', content: data.image },
             {
               name: 'twitter:description',
               content: data.description,
