@@ -10,8 +10,7 @@ import Contact from '../components/contact.jsx';
 import Footer from '../components/footer.jsx';
 import Citation from '../components/citation.jsx';
 import SpeakerDeck from '../components/speakerdeck.jsx';
-import ForkMeOnGitHub from 'fork-me-on-github';
-
+import Projects from '../components/projects.jsx';
 import data from '../../template.yaml';
 
 class Template extends React.Component {
@@ -54,13 +53,6 @@ class Template extends React.Component {
             { name: 'twitter:site', content: data.twitter },
           ]}
         />
-        <div data-uk-sticky className="uk-visible@l">
-          <ForkMeOnGitHub
-            repo={data.resources.code}
-            colorBackground="#999"
-            colorOctocat="white"
-          />
-        </div>
         <Header
           title={data.title}
           conference={data.conference}
@@ -68,6 +60,8 @@ class Template extends React.Component {
           affiliations={data.affiliations}
           meta={data.meta}
           resources={data.resources}
+          theme={data.theme}
+          header={data.header}
         />
         <div className="uk-container uk-container-small">
           <Overview
@@ -77,13 +71,14 @@ class Template extends React.Component {
           />
           <Video video={data.resources.video} />
           <SpeakerDeck dataId={data.speakerdeck} />
-          <Body method={data.body} />
+          <Body body={data.body} />
           <Contact
             authors={data.authors}
             contact_ids={data.contact_ids}
             resources={data.resources}
           />
           <Citation bibtex={data.bibtex} />
+          <Projects projects={data.projects} />
         </div>
         <Footer />
       </div>

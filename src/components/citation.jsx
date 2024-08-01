@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import UIkit from 'uikit';
-import { LuClipboardCopy } from 'react-icons/lu';
+import { FaCopy } from 'react-icons/fa';
 
 const CopyButton = ({ text }) => {
   const copyToClipboard = () => {
@@ -18,7 +18,7 @@ const CopyButton = ({ text }) => {
   };
   return (
     <button
-      className="tooltip uk-align-right"
+      className="tooltip uk-align-right uk-text-emphasis"
       onClick={copyToClipboard}
       style={{
         border: 'none',
@@ -27,7 +27,7 @@ const CopyButton = ({ text }) => {
         cursor: 'pointer',
       }}
     >
-      <LuClipboardCopy size={18} />
+      <FaCopy size={18} />
     </button>
   );
 };
@@ -40,7 +40,7 @@ export default class Citation extends React.Component {
   render() {
     return (
       <div className="uk-section">
-        <h2>Citation</h2>
+        <h2 className="uk-heading-line uk-text-center">Citation</h2>
         <pre
           className="uk-padding-small"
           style={{

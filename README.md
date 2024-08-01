@@ -1,10 +1,17 @@
+# :warning: DO NOT USE THIS BRANCH UNTIL LOGO RELEASE (2024 Summer)
+- See https://sinicx.sharepoint.com/:u:/r/sites/OSX/SitePages/%E3%83%AD%E3%82%B4%E4%BD%9C%E6%88%90---Logo-design.aspx?csf=1&web=1&share=EVUOoIvp_xBBu86MfZIoRzwBlGsX928w_FniJL0z3aeSZQ&e=LeINXk
+
 # sinicx-template
 [![build](https://github.com/omron-sinicx/projectpage-template/actions/workflows/build.yaml/badge.svg)](https://github.com/omron-sinicx/projectpage-template/actions/workflows/build.yaml) [![build](https://github.com/omron-sinicx/projectpage-template/actions/workflows/lint.yaml/badge.svg)](https://github.com/omron-sinicx/projectpage-template/actions/workflows/lint.yaml)
 - A project page template using [React](https://ja.reactjs.org/) + [UIKit](https://getuikit.com/)
 - **Demo**: ⛅[light-theme](https://omron-sinicx.github.io/ncf2/) 🕶️[dark-theme](https://omron-sinicx.github.io/ctrm/)
 
 > [!TIP]
-> You can switch themes by selecting [theme scss files](https://github.com/omron-sinicx/projectpage-template/blob/main/src/js/styles.js#L1-L2)
+> You can switch themes by setting [theme field in template.yaml](https://github.com/omron-sinicx/projectpage-template/blob/main/template.yaml#L1-L2)
+
+```yaml
+theme: default # default || dark
+```
 
 ## Prerequisites
 - Before you begin, ensure you have met the following requirements:
@@ -69,10 +76,9 @@ src/
 │   └── video.jsx
 ├── html
 │   └── index.html
-├── images               # images to be relocated to assets/ by file-loader
+├── media # media files to be relocated to assets/ by file-loader
 │   ├── method.png
-│   ├── result1.png
-│   ├── result2.png
+│   ├── demo.mp4
 │   └── teaser.png
 ├── videos
 │   └── result1.mp4
