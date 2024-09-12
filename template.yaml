@@ -65,7 +65,8 @@ body:
       utilized as a replacement module for the replanning strategy
       in existing planning frameworks, thus making it compatible
       with various combinations of planners and other modules.
-  - text: |
+  - title: Evaluation
+    text: |
       ### v.s. Conventional Replanning Strategies
       <div uk-grid>
         <div class="uk-width-1-3 uk-text-center">
