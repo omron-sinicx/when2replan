@@ -11,7 +11,7 @@ export default class Player extends React.Component {
   render() {
     return this.props.demo ? (
       <div className="uk-section">
-        <h2>Demo</h2>
+        <h3 className="uk-heading-line uk-text-center">DEMO</h3>
         <Slider>
           <ul className="uk-slider-items">
             {this.props.demo.map((d, idx) => {

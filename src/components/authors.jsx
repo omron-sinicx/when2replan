@@ -29,7 +29,7 @@ export default class Authors extends React.Component {
           })}
         </div>
         <div
-          className="uk-text-meta uk-text-center uk-grid-collapse"
+          className="uk-text-primary uk-text-center uk-grid-collapse"
           data-uk-grid
         >
           {this.props.affiliations.map((affiliation, idx) => {

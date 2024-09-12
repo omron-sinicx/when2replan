@@ -5,15 +5,12 @@ import { Helmet } from 'react-helmet';
 import Header from '../components/header.jsx';
 import Overview from '../components/overview.jsx';
 import Video from '../components/video.jsx';
-import Player from '../components/react-player.jsx';
-import Method from '../components/method.jsx';
-import Result from '../components/results.jsx';
+import Body from '../components/body.jsx';
 import Contact from '../components/contact.jsx';
 import Footer from '../components/footer.jsx';
 import Citation from '../components/citation.jsx';
 import SpeakerDeck from '../components/speakerdeck.jsx';
-import ForkMeOnGitHub from 'fork-me-on-github';
-
+import Projects from '../components/projects.jsx';
 import data from '../../template.yaml';
 
 class Template extends React.Component {
@@ -37,16 +34,17 @@ class Template extends React.Component {
               property: 'og:description',
               content: data.description,
             },
-            { property: 'og:image', content: data.image }, // FIXME
-            { property: 'og:image:width', content: '912' },
-            { property: 'og:image:height', content: '618' },
+            { property: 'og:image', content: data.image },
+            { property: 'og:image:alt', content: data.description },
+            { property: 'og:image:width', content: '1200' },
+            { property: 'og:image:height', content: '600' },
             { property: 'og:url', content: data.url },
             {
               name: 'twitter:card',
               content: 'summary_large_image',
             },
             { name: 'twitter:title', content: data.title },
-            { name: 'twitter:image', content: data.image },
+            { name: 'twitter:image:src', content: data.image },
             {
               name: 'twitter:description',
               content: data.description,
@@ -55,13 +53,6 @@ class Template extends React.Component {
             { name: 'twitter:site', content: data.twitter },
           ]}
         />
-        <div data-uk-sticky className="uk-visible@l">
-          <ForkMeOnGitHub
-            repo={data.resources.code}
-            colorBackground="#999"
-            colorOctocat="white"
-          />
-        </div>
         <Header
           title={data.title}
           conference={data.conference}
@@ -69,20 +60,25 @@ class Template extends React.Component {
           affiliations={data.affiliations}
           meta={data.meta}
           resources={data.resources}
+          theme={data.theme}
+          header={data.header}
         />
         <div className="uk-container uk-container-small">
-          <Overview overview={data.overview} description={data.description} />
+          <Overview
+            overview={data.overview}
+            teaser={data.teaser}
+            description={data.description}
+          />
           <Video video={data.resources.video} />
           <SpeakerDeck dataId={data.speakerdeck} />
-          <Method method={data.method} />
-          <Result results={data.results} />
-          <Player demo={data.demo} />
+          <Body body={data.body} />
           <Contact
             authors={data.authors}
             contact_ids={data.contact_ids}
             resources={data.resources}
           />
           <Citation bibtex={data.bibtex} />
+          <Projects projects={data.projects} />
         </div>
         <Footer />
       </div>

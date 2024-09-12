@@ -1,10 +1,14 @@
 # sinicx-template
 [![build](https://github.com/omron-sinicx/projectpage-template/actions/workflows/build.yaml/badge.svg)](https://github.com/omron-sinicx/projectpage-template/actions/workflows/build.yaml) [![build](https://github.com/omron-sinicx/projectpage-template/actions/workflows/lint.yaml/badge.svg)](https://github.com/omron-sinicx/projectpage-template/actions/workflows/lint.yaml)
 - A project page template using [React](https://ja.reactjs.org/) + [UIKit](https://getuikit.com/)
-- **Demo**: ⛅[light-theme](https://omron-sinicx.github.io/ncf2/) 🕶️[dark-theme](https://omron-sinicx.github.io/ctrm/)
+- **Demo**: ⛅[light-theme](https://omron-sinicx.github.io/mabr/) 🕶️ dark-theme
 
 > [!TIP]
-> You can switch themes by selecting [theme scss files](https://github.com/omron-sinicx/projectpage-template/blob/main/src/js/styles.js#L1-L2)
+> You can switch themes by setting [theme field in template.yaml](https://github.com/omron-sinicx/projectpage-template/blob/main/template.yaml#L1-L2)
+
+```yaml
+theme: default # default || dark
+```
 
 ## Prerequisites
 - Before you begin, ensure you have met the following requirements:
@@ -69,10 +73,9 @@ src/
 │   └── video.jsx
 ├── html
 │   └── index.html
-├── images               # images to be relocated to assets/ by file-loader
+├── media # media files to be relocated to assets/ by file-loader
 │   ├── method.png
-│   ├── result1.png
-│   ├── result2.png
+│   ├── demo.mp4
 │   └── teaser.png
 ├── videos
 │   └── result1.mp4
@@ -153,13 +156,12 @@ bibtex: >
     - see https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-set-personal-access-token-personal_token
     - register the token as `PERSONAL_TOKEN` at `https://github.com/path/to/your/repo/settings/secrets/actions`
 
-### Release project-page
+### Release your project page automatically bt GitHub Actions
+- Navigate to `https://github.com/{your-github-repo-path}/settings/pages`
+- Select `GitHub Actions` at **Build and Deployment > Source**
 - `$ git remote add github {your-github-repo-path}`
 - `$ git push github {local-project-page-branch}:project-page`
-  - GitHub Action atuomatically build HTML on `project-page` branch, and then send it to `gh-pages` branch.
-  - All you need to do is to push your project page code to `project-page` branch on your GitHub repo.
-### If the project page is not released automatically:
-- set `Source` `Branch=gh-pages` `/(root)` at `https://github.com/path/to/your/repo/settings/pages`
+- See also: [GitHub Documentation](https://docs.github.com/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) and [actions/deploy-pages](https://github.com/actions/deploy-pages)
 
 ## Contributions
 Pull requests and bug reports are welcome. Feel free to [open issues](https://github.com/omron-sinicx/projectpage-template/issues)

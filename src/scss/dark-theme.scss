@@ -4,14 +4,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Titillium+Web:wght@600&display=swap');
 
-$global-font-family: 'Titillium Web', 'Raleway', 'Ubuntu';
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.cdnfonts.com/css/mattone');
+
+$global-font-family: 'Montserrat', 'Open Sans', 'Raleway', 'Ubuntu';
+$base-heading-font-family: 'Mattone';
 
 // code block
-$base-pre-background: #f8f8f8;
+$base-pre-background: #f9f9f9;
 $base-pre-border: 0 solid #e5e5e5;
 $base-pre-border-radius: 0;
 $base-pre-font-size: 12px;
-$base-pre-font-family: 'Roboto Mono', monospace;
+$base-pre-font-family: 'SFMono-Regular', 'Consolas', monospace;
 
 // sections
 $section-padding-vertical-m: 25px;
@@ -24,9 +29,17 @@ $tooltip-border-radius: 5px;
 // $global-medium-font-size: clamp(15px,1vw,18px); // comment-font-size
 
 $omron-color: #1c5eb8;
+$accent-color: #e55927;
 
+$global-link-color: $accent-color;
 $theme-color: #282c34;
-$theme-color-fg: #eee;
+$theme-color-fg: #fff;
+$global-color: #000;
+$global-emphasis-color: $theme-color-fg;
+$base-heading-color: $global-color;
+$text-primary-color: $theme-color-fg;
+$text-secondary-color: $global-color;
+
 $button-text-color: $theme-color-fg;
 $button-text-hover-color: #fff;
 
@@ -35,8 +48,14 @@ $button-text-hover-color: #fff;
 
 $background-secondary-background: $theme-color;
 $button-primary-background: $theme-color;
-$global-primary-background: $omron-color;
+$global-primary-background: $accent-color;
 $text-primary-color: $theme-color-fg;
+
+// sinicx logo
+$navbar-nav-item-height: 60px;
+$navbar-background: $theme-color;
+
+// $navbar-background: $theme-color-fg;
 
 // default variables and mixins
 @import 'uikit/src/scss/variables-theme.scss';

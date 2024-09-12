@@ -48,6 +48,8 @@
     "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
+    "@iconify-json/logos": "^1.1.43",
+    "@iconify/react": "^5.0.1",
     "fork-me-on-github": "^1.0.6",
     "marked": "^12.0.1",
     "marked-katex-extension": "^5.0.1",

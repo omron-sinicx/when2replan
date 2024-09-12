@@ -1,3 +1,4 @@
+theme: default # default || dark
 organization: OMRON SINIC X
 twitter: '@omron_sinicx'
 title: 'When to Replan? An Adaptive Replanning Strategy for Autonomous Navigation using Deep Reinforcement Learning'
@@ -43,11 +44,16 @@ bibtex: >
         archivePrefix={arXiv},
         primaryClass={cs.RO}
   }
+header:
+  bg_curve:
+    sinic_curve.png
+    #  bg_image: https://github.com/omron-sinicx/swarm-body/raw/main/images/teaser.jpg
 
+teaser: teaser.gif
 overview: |
   The hierarchy of global and local planners is one of the most commonly utilized system designs in autonomous robot navigation. While the global planner generates a reference path from the current to goal locations based on the pre-built map, the local planner produces a kinodynamic trajectory to follow the reference path while avoiding perceived obstacles. To account for unforeseen or dynamic obstacles not present on the pre-built map, **``when to replan''** the reference path is critical for the success of safe and efficient navigation. However, determining the ideal timing to execute replanning in such partially unknown environments still remains an open question. In this work, we first conduct an extensive simulation experiment to compare several common replanning strategies and confirm that effective strategies are highly dependent on the environment as well as the global and local planners. Based on this insight, we then derive a new adaptive replanning strategy based on deep reinforcement learning, which can learn from experience to decide appropriate replanning timings in the given environment and planning setups. Our experimental results show that the proposed replanner can perform on par or even better than the current best-performing strategies in multiple situations regarding navigation robustness and efficiency.
 
-method:
+body:
   - title: Adaptive Replanning using Deep Reinforcement Learning
     image: overview.png
     text: >
@@ -59,8 +65,6 @@ method:
       utilized as a replacement module for the replanning strategy
       in existing planning frameworks, thus making it compatible
       with various combinations of planners and other modules.
-
-results:
   - text: |
       ### v.s. Conventional Replanning Strategies
       <div uk-grid>
