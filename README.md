@@ -39,7 +39,7 @@ python3 run.py\
         run.model_dir="../trained_model"\
         run.model_name="DijkstraxDWA/16pillar.zip"\
         run.log_save_dir="run/DijkstraxDWA/16pillar"\
-        run.navigation_scenarios="config/scenario/sixteen_pillar/random.yaml"\
+        run.navigation_scenarios=["config/scenario/sixteen_pillar/random.yaml"]\
         run.view_animation=False\
         run.seeds=[37]\
         navigation.common.global_planner="Dijkstra"\
