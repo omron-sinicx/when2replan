@@ -19,8 +19,6 @@ from stable_baselines3.common.monitor import Monitor
 from navigation_stack_py.rl_modules.dqn.dqn import DQN
 from utils import HyperParameters
 
-from expert import ExpertActor
-
 from omegaconf import OmegaConf, DictConfig
 import hydra
 
@@ -82,9 +80,6 @@ def run(method_name: str, params: HyperParameters, seed: int):
     average_calculation_time = 0.0
     max_calculation_time = 0.0
 
-    if method_name == "expert":
-        expert = ExpertActor(seed=seed, max_hz=env.get_max_global_hz())
-
     obs = env.reset()
 
     # save map with pickle
@@ -101,8 +96,6 @@ def run(method_name: str, params: HyperParameters, seed: int):
 
         if method_name == "rl_based_replan":
             action, _ = model.predict(obs, deterministic=True)
-        elif method_name == "expert":
-            action = expert.act(obs)
         else:
             action = getattr(env, method_name)()
         elapsed_time = time.time() - start_time

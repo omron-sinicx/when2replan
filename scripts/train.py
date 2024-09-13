@@ -40,7 +40,6 @@ from navigation_stack_py.rl_modules.common.buffers import PrioritizedReplayBuffe
 from navigation_stack_py.rl_modules.her.her_replay_buffer import HerReplayBuffer
 
 from map_creator import generate_random_maps
-from expert import ExpertActor
 from utils import HyperParameters, make_proc_env
 
 from omegaconf import OmegaConf, DictConfig
