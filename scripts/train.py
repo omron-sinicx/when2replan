@@ -39,7 +39,6 @@ from navigation_stack_py.rl_modules.dqn.dqn import DQN
 from navigation_stack_py.rl_modules.common.buffers import PrioritizedReplayBuffer
 from navigation_stack_py.rl_modules.her.her_replay_buffer import HerReplayBuffer
 
-from map_creator import generate_random_maps
 from utils import HyperParameters, make_proc_env
 
 from omegaconf import OmegaConf, DictConfig
@@ -407,10 +406,6 @@ def main(cfg: DictConfig):
     # get params
     train_config = OmegaConf.to_container(cfg, resolve=True)
     params = HyperParameters(config=train_config, mode="train")
-
-    # generate random maps
-    if params.is_generate_random_map:
-        generate_random_maps(params.map_config, params.random_map_num, params.seed)
 
     print("RL algorithm: ", params.rl_algorithm)
     print("Train mode: ", params.train_mode)

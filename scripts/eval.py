@@ -17,7 +17,6 @@ from navigation_stack_py.gym_env import NavigationStackEnv
 from navigation_stack_py.utils import DataLogger
 from navigation_stack_py.rl_modules.dqn.dqn import DQN
 
-from map_creator import generate_random_maps
 from utils import HyperParameters, evaluate_policy
 
 
@@ -328,10 +327,6 @@ def main(cfg: DictConfig):
     # params
     eval_config = OmegaConf.to_container(cfg, resolve=True)
     params = HyperParameters(config=eval_config, mode="eval")
-
-    # generate random maps
-    if params.is_generate_random_map:
-        generate_random_maps(params.map_config, params.random_map_num, params.seed)
 
     # init log dir
     current_log_dir = init_log_dir(params=params)
