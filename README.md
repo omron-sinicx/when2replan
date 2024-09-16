@@ -31,7 +31,9 @@ pip3 install -e .
 
 ## Run Navigation with pre-trained model
 
-Run setting file is [here](./config//run/default.yaml)
+Run setting file is [here](./config/run/default.yaml)
+
+For example, to run a specific setting, you can use the following command:
 
 ```bash
 cd scripts
@@ -46,11 +48,18 @@ python3 run.py\
         navigation.common.local_planner="DWA"
 ```
 
-You can visualize using pygame
+To visualize the results using Pygame, run:
 
 ```bash
 cd scripts
-python3 pygame_visualizer.py main ../log/run/latest/[method-name]_data.pkl
+python3 pygame_visualizer.py main ../log/run/[planners]/[map-layout]/[seed]/[method-name]_data.pkl
+```
+
+For example,
+
+```bash
+cd scripts
+python3 pygame_visualizer.py main ../log/run/DijkstraxDWA/16pillar/37/rl_based_replan_data.pkl
 ```
 
 ## Train
@@ -97,13 +106,13 @@ Or, logged the all results in `./log` dir
 
 ## Citation
 ```
-@misc{honda2024replan,
-      title={When to Replan? An Adaptive Replanning Strategy for Autonomous Navigation using Deep Reinforcement Learning},
-      author={Kohei Honda and Ryo Yonetani and Mai Nishimura and Tadashi Kozuno},
-      year={2024},
-      eprint={2304.12046},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO}
+@inproceedings{honda2024replan,
+  title={When to Replan? An Adaptive Replanning Strategy for Autonomous Navigation using Deep Reinforcement Learning},
+  author={Honda, Kohei and Yonetani, Ryo and Nishimura, Mai and Kozuno, Tadashi},
+  booktitle={IEEE International Conference on Robotics and Automation},
+  pages={6650--6656},
+  year={2024},
+  organization={IEEE}
 }
 ```
 
